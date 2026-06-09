@@ -1,0 +1,1 @@
+window.docContents[88].resolve({"/Type-Classes/#ToString":{"contents":"\n\n多态方法 toString 的类型是 {α : Type u} → [ToString α] → α → String\n。你可以为自己的类型实现其实例，并通过链接把复杂值转换为字符串。Lean 为大多数内建类型提供了 ToString\n 实例。\n\n","context":"Lean 4 定理证明\u0009类型类","header":"10.2. ToString（转为字符串）","id":"/Type-Classes/#ToString"}});

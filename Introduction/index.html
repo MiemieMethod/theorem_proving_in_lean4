@@ -8,28 +8,58 @@
     window.location.replace(`${proto}//${hostName}${path}/${srch}${hsh}`);
   }
 })()</script>
+    <script>
+      // Enable TypeScript checking.
+// @ts-check
+
+// Applies a saved table-of-contents width before the first paint.
+//
+// This is a tiny inline counterpart to toc-resize.js: it runs in the page head so that
+// returning desktop readers do not see the default width flash to their saved width.
+// It only records the width in the --verso-toc-user-width custom property; the
+// stylesheet clamps it and ignores it on mobile, and toc-resize.js then takes over the
+// interactive resizing. Keep the storage key in sync with toc-resize.js.
+
+(function () {
+    try {
+        const saved = localStorage.getItem("verso-toc-width");
+        // Parse to a number (as toc-resize.js does) and write that back, so a stored
+        // value with stray whitespace becomes a valid length rather than `" 420 px"`.
+        const width = saved === null ? NaN : Number(saved);
+        if (Number.isFinite(width)) {
+            document.documentElement.style.setProperty("--verso-toc-user-width", `${width}px`);
+        }
+    } catch (_) {
+        // Leave the default width in place when local storage is unavailable.
+    }
+})();
+</script>
     <base href="./../"><meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>Introduction</title><link rel="stylesheet" href="book.css">
+    <title>引言</title><link rel="stylesheet" href="book.css">
     <link rel="stylesheet" href="verso-vars.css">
     <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js" integrity="sha384-zbcZAIxlvJtNE3Dp5nxLXdXtXyxwOdnILY1TDPVmKFhl4r4nSUG1r8bcFXGVa4Te" crossorigin="anonymous"></script>
-    <script src="-verso-search/elasticlunr.min.js"></script>
-    <script src="-verso-search/fuzzysort.min.js"></script>
-    <script src="-verso-search/searchIndex.js"></script>
+    <script defer="defer" src="-verso-search/elasticlunr.min.js"></script>
+    <script defer="defer" src="-verso-search/fuzzysort.min.js"></script>
+    <script defer="defer" src="-verso-search/searchIndex.js"></script>
+    <script defer="defer" src="-verso-search/search-config.js"></script>
     <script type="module" src="-verso-search/search-init.js"></script>
     <link rel="stylesheet" href="-verso-search/search-box.css">
+    <link rel="stylesheet" href="-verso-search/search-page.css">
     <link rel="stylesheet" href="-verso-search/search-highlight.css">
     <link rel="stylesheet" href="-verso-search/domain-display.css">
-    <script src="-verso-data/popper.min.js"></script>
+    <script src="-verso-search/search-highlight.js" defer="defer"></script>
+    <script src="toc-resize.js" defer="defer"></script>
+    <script src="-verso-data/katex/katex.js"></script>
     <script src="-verso-data/katex/math.js"></script>
+    <script src="-verso-data/popper.min.js"></script>
     <script src="-verso-data/copybutton.js"></script>
     <script src="-verso-data/tippy-bundle.umd.min.js"></script>
-    <script src="-verso-data/katex/katex.js"></script>
     <link rel="stylesheet" href="-verso-data/tippy-border.css">
-    <link rel="stylesheet" href="-verso-data/katex/katex.css">
     <link rel="stylesheet" href="-verso-data/proof-state.css">
     <link rel="stylesheet" href="-verso-data/copybutton.css">
     <link rel="stylesheet" href="-verso-data/examples.css">
+    <link rel="stylesheet" href="-verso-data/katex/katex.css">
     <style>/static/fonts/source-code-pro/source-code-pro.css</style><style>
 table.tabular {
   margin: auto;
@@ -136,6 +166,21 @@ a.technical-term:hover {
   font-family: var(--verso-code-font-family,);
 }
 
+/* These lexically-classified token kinds default to the `.unknown` appearance. The rule follows
+   `.const` so it wins for the `anon-ctor` tokens, which also carry the `const` class. */
+.hl.lean .anon-ctor,
+.hl.lean .number,
+.hl.lean .char,
+.hl.lean .comment,
+.hl.lean .punctuation,
+.hl.lean .delim,
+.hl.lean .wildcard {
+  color: var(--verso-code-color,);
+  font-weight: normal;
+  font-style: normal;
+  font-family: var(--verso-code-font-family,);
+}
+
 .hover-container {
   width: 0;
   height: 0;
@@ -218,7 +263,7 @@ a.technical-term:hover {
 }
 
 @media (hover: hover) {
-  .hl.lean .token.binding-hl, .hl.lean .literal.string:hover, .hl.lean .token.typed:hover {
+  .hl.lean .token.binding-hl, .hl.lean .literal:hover, .hl.lean .token.typed:hover {
     background-color: #eee;
     border-radius: 2px;
     transition: none;
@@ -398,7 +443,7 @@ a.technical-term:hover {
   text-size-adjust: 100%;
 }
 
-.hl.lean .tactic:has(.tactic-toggle:checked) {
+.hl.lean .tactic:has(> .tactic-toggle:checked) {
   display: inline-grid;
   grid-template-columns: 1fr;
 }
@@ -417,7 +462,10 @@ a.technical-term:hover {
 }
 
 @media (hover: hover) {
-  .hl.lean .tactic:has(.tactic-toggle:not(:checked)) > label:hover {
+  /* Highlight a region on hover only when its own toggle is unchecked, and only the innermost
+     hovered region: `label:hover` bubbles to ancestor labels, so suppress the highlight on a region
+     whose label contains a more deeply nested hovered tactic label. */
+  .hl.lean .tactic:has(> .tactic-toggle:not(:checked)) > label:hover:not(:has(.tactic > label:hover)) {
     background-color: #eeeeee;
   }
 }
@@ -618,7 +666,6 @@ Some CSS frameworks customize details/summary in ways not compatible with Verso'
   /* Without these, mobile Safari will start making font sizes inconsistent when its text size adjustment feature is triggered.*/
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-
 }
 
 .tippy-box[data-theme~='lean'] {
@@ -768,7 +815,7 @@ window.onload = () => {
       let parent = elem.parentNode;
       while (parent && "classList" in parent) {
         if (parent.classList.contains("tactic")) {
-          const toggle = parent.querySelector("input.tactic-toggle");
+          const toggle = parent.querySelector(":scope > input.tactic-toggle");
           if (toggle) {
             return !toggle.checked;
           }
@@ -778,41 +825,50 @@ window.onload = () => {
       return false;
     }
 
+    // Track whether any tippy is visible (O(1) check instead of DOM scan)
+    let visibleTippyCount = 0;
     function blockedByTippy(elem) {
-      // Don't show a new hover until the old ones are all closed.
-      // Scoped to the nearest "top-level block" to avoid being O(n) in the size of the document.
-      var block = elem;
-      const topLevel = new Set(["section", "body", "html", "nav", "header"]);
-      while (block.parentNode && !topLevel.has(block.parentNode.nodeName.toLowerCase())) {
-        block = block.parentNode;
-      }
-      for (const child of block.querySelectorAll(".token, .has-info")) {
-        if (child._tippy && child._tippy.state.isVisible) { return true };
-      }
-      return false;
+      return visibleTippyCount > 0;
     }
 
-    for (const c of document.querySelectorAll(".hl.lean .token")) {
-        if (c.dataset.binding != "") {
-            c.addEventListener("mouseover", (event) => {
-                if (blockedByTactic(c)) {return;}
-                const context = c.closest(".hl.lean").dataset.leanContext;
-                for (const example of document.querySelectorAll(".hl.lean")) {
-                    if (example.dataset.leanContext == context) {
-                        for (const tok of example.querySelectorAll(".token")) {
-                            if (c.dataset.binding == tok.dataset.binding) {
-                                tok.classList.add("binding-hl");
-                            }
-                        }
-                    }
-                }
-            });
-        }
-        c.addEventListener("mouseout", (event) => {
-            for (const tok of document.querySelectorAll(".hl.lean .token")) {
-                tok.classList.remove("binding-hl");
+    // Binding highlights via event delegation with cached lookups
+    const bindingCache = new Map(); // context+binding -> [token elements]
+    let highlightedTokens = [];
+    function getBindingTokens(context, binding) {
+      const key = context + "\0" + binding;
+      let tokens = bindingCache.get(key);
+      if (!tokens) {
+        tokens = [];
+        for (const example of document.querySelectorAll(".hl.lean")) {
+          if (example.dataset.leanContext == context) {
+            for (const tok of example.querySelectorAll(".token[data-binding=\"" + CSS.escape(binding) + "\"]")) {
+              tokens.push(tok);
             }
-        });
+          }
+        }
+        bindingCache.set(key, tokens);
+      }
+      return tokens;
+    }
+    for (const container of document.querySelectorAll(".hl.lean")) {
+      container.addEventListener("mouseover", (event) => {
+        const c = event.target.closest(".token");
+        if (!c || !c.dataset.binding || c.dataset.binding === "" || !container.contains(c)) return;
+        if (blockedByTactic(c)) return;
+        const tokens = getBindingTokens(container.dataset.leanContext, c.dataset.binding);
+        for (const tok of tokens) {
+          tok.classList.add("binding-hl");
+        }
+        highlightedTokens = tokens;
+      });
+      container.addEventListener("mouseout", (event) => {
+        const c = event.target.closest(".token");
+        if (!c || !container.contains(c)) return;
+        for (const tok of highlightedTokens) {
+          tok.classList.remove("binding-hl");
+        }
+        highlightedTokens = [];
+      });
     }
     /* Render docstrings */
     if ('undefined' !== typeof marked) {
@@ -856,13 +912,12 @@ window.onload = () => {
         followCursor: 'initial',
         onShow(inst) {
           if (inst.reference.className == 'tactic') {
-
-            const toggle = inst.reference.querySelector("input.tactic-toggle");
+            const toggle = inst.reference.querySelector(":scope > input.tactic-toggle");
             if (toggle && toggle.checked) {
               return false;
             }
             hideParentTooltips(inst.reference);
-            //if (blockedByTippy(inst.reference)) { return false; }
+            if (blockedByTippy(inst.reference)) { return false; }
 
           } else if (inst.reference.querySelector(".hover-info") || "versoHover" in inst.reference.dataset) {
             if (blockedByTactic(inst.reference)) { return false };
@@ -871,10 +926,12 @@ window.onload = () => {
             return false;
           }
         },
+        onShown(inst) { visibleTippyCount++; },
+        onHidden(inst) { visibleTippyCount = Math.max(0, visibleTippyCount - 1); },
         content (tgt) {
           const content = document.createElement("span");
           if (tgt.className == 'tactic') {
-            const state = tgt.querySelector(".tactic-state").cloneNode(true);
+            const state = tgt.querySelector(":scope > .tactic-state").cloneNode(true);
             state.style.display = "block";
             content.appendChild(state);
             content.style.display = "block";
@@ -950,12 +1007,44 @@ window.onload = () => {
       document.querySelectorAll('.hl.lean .tactic').forEach(element => {
         element.setAttribute('data-tippy-theme', 'tactic');
       });
-      let insts = tippy('.hl.lean .const.token, .hl.lean .keyword.token, .hl.lean .literal.token, .hl.lean .option.token, .hl.lean .var.token, .hl.lean .typed.token, .hl.lean .has-info, .hl.lean .tactic, .hl.lean .level-var, .hl.lean .level-const, .hl.lean .level-op, .hl.lean .sort', defaultTippyProps);
+      // Skip tokens inside closed tactics — they interfere with tactic tippys
+      const closedTactics = new Set();
+      document.querySelectorAll('.hl.lean .tactic').forEach(tactic => {
+        const toggle = tactic.querySelector(':scope > input.tactic-toggle');
+        if (toggle && !toggle.checked) closedTactics.add(tactic);
+      });
+      function isInsideClosedTactic(el) {
+        const tactic = el.closest('.tactic');
+        return tactic && tactic !== el && closedTactics.has(tactic);
+      }
+
+      const tokenSelector = '.hl.lean .const.token, .hl.lean .keyword.token, .hl.lean .literal.token, .hl.lean .option.token, .hl.lean .var.token, .hl.lean .typed.token, .hl.lean .has-info, .hl.lean .tactic, .hl.lean .level-var, .hl.lean .level-const, .hl.lean .level-op, .hl.lean .sort';
+      tippy(Array.from(document.querySelectorAll(tokenSelector)).filter(el => !isInsideClosedTactic(el)), defaultTippyProps);
+
+      // Create/destroy token tippys when tactic checkbox toggles
+      const tacticTippySelector = '.const.token, .keyword.token, .literal.token, .option.token, .var.token, .typed.token, .has-info, .level-var, .level-const, .level-op, .sort';
+      document.querySelectorAll('.hl.lean .tactic').forEach(tactic => {
+        const toggle = tactic.querySelector(':scope > input.tactic-toggle');
+        if (toggle) toggle.addEventListener('change', () => {
+          if (toggle.checked) {
+            closedTactics.delete(tactic);
+            tactic.querySelectorAll('.token').forEach(tok => {
+              if (!tok._tippy && tok.matches(tacticTippySelector)) {
+                tippy(tok, defaultTippyProps);
+              }
+            });
+          } else {
+            closedTactics.add(tactic);
+            tactic.querySelectorAll('.token').forEach(tok => {
+              if (tok._tippy) tok._tippy.destroy();
+            });
+          }
+        });
+      });
   });
 }
 </script>
     <script defer="defer" data-domain="lean-lang.org" src="https://plausible.io/js/script.outbound-links.js"></script>
-    <script src="-verso-search/search-highlight.js" defer="defer"></script>
     </head>
   <body>
     <header>
@@ -963,7 +1052,7 @@ window.onload = () => {
         <a href="" id="logo"><img src="static/lean_logo.svg"></a></div>
       <div class="header-title-wrapper">
         <a href="" class="header-title"><h1>
-            Theorem Proving in Lean 4</h1>
+            Lean 4 定理证明</h1>
           </a></div>
       </header>
     <label for="toggle-toc" id="toggle-toc-click"><span class="line line1"></span><span class="line line2"></span><span class="line line3"></span></label><div class="with-toc">
@@ -971,16 +1060,16 @@ window.onload = () => {
       <nav id="toc">
         <input type="checkbox" id="toggle-toc"><div class="first">
           <a href="" class="toc-title"><h1>
-              Theorem Proving in Lean 4</h1>
+              Lean 4 定理证明</h1>
             </a><div class="split-tocs">
             <div class="split-toc book">
               <div class="title">
                 <label for="--verso-manual-toc-----bookRoot" class="toggle-split-toc"><input type="checkbox" class="toggle-split-toc" id="--verso-manual-toc-----bookRoot" checked="checked"></label><span class="">Table of Contents</span></div>
-              <table><tr class="current numbered"><td class="num">1.</td><td><a href="Introduction/#Intro">Introduction</a></td></tr><tr class="numbered"><td class="num">2.</td><td><a href="Dependent-Type-Theory/#dependent-type-theory">Dependent Type Theory</a></td></tr><tr class="numbered"><td class="num">3.</td><td><a href="Propositions-and-Proofs/#propositions-and-proofs">Propositions and Proofs</a></td></tr><tr class="numbered"><td class="num">4.</td><td><a href="Quantifiers-and-Equality/#quantifiers-and-equality">Quantifiers and Equality</a></td></tr><tr class="numbered"><td class="num">5.</td><td><a href="Tactics/#Theorem-Proving-in-Lean-4--Tactics">Tactics</a></td></tr><tr class="numbered"><td class="num">6.</td><td><a href="Interacting-with-Lean/#Theorem-Proving-in-Lean-4--Interacting-with-Lean">Interacting with Lean</a></td></tr><tr class="numbered"><td class="num">7.</td><td><a href="Inductive-Types/#inductive-types">Inductive Types</a></td></tr><tr class="numbered"><td class="num">8.</td><td><a href="Induction-and-Recursion/#induction-and-recursion">Induction and Recursion</a></td></tr><tr class="numbered"><td class="num">9.</td><td><a href="Structures-and-Records/#structures-and-records">Structures and Records</a></td></tr><tr class="numbered"><td class="num">10.</td><td><a href="Type-Classes/#type-classes">Type Classes</a></td></tr><tr class="numbered"><td class="num">11.</td><td><a href="The-Conversion-Tactic-Mode/#conv">The Conversion Tactic Mode</a></td></tr><tr class="numbered"><td class="num">12.</td><td><a href="Axioms-and-Computation/#axioms-and-computation">Axioms and Computation</a></td></tr></table></div>
+              <table><tr class="current numbered"><td class="num">1.</td><td><a href="Introduction/#Intro">引言</a></td></tr><tr class="numbered"><td class="num">2.</td><td><a href="Dependent-Type-Theory/#dependent-type-theory">依赖类型论</a></td></tr><tr class="numbered"><td class="num">3.</td><td><a href="Propositions-and-Proofs/#propositions-and-proofs">命题与证明</a></td></tr><tr class="numbered"><td class="num">4.</td><td><a href="Quantifiers-and-Equality/#quantifiers-and-equality">量词与等式</a></td></tr><tr class="numbered"><td class="num">5.</td><td><a href="Tactics/#tactics">策略</a></td></tr><tr class="numbered"><td class="num">6.</td><td><a href="Interacting-with-Lean/#interacting-with-lean">与 Lean 交互</a></td></tr><tr class="numbered"><td class="num">7.</td><td><a href="Inductive-Types/#inductive-types">归纳类型</a></td></tr><tr class="numbered"><td class="num">8.</td><td><a href="Induction-and-Recursion/#induction-and-recursion">归纳与递归</a></td></tr><tr class="numbered"><td class="num">9.</td><td><a href="Structures-and-Records/#structures-and-records">结构与记录</a></td></tr><tr class="numbered"><td class="num">10.</td><td><a href="Type-Classes/#type-classes">类型类</a></td></tr><tr class="numbered"><td class="num">11.</td><td><a href="The-Conversion-Tactic-Mode/#conv">转换策略模式</a></td></tr><tr class="numbered"><td class="num">12.</td><td><a href="Axioms-and-Computation/#axioms-and-computation">公理与计算</a></td></tr></table></div>
             <div class="split-toc">
               <div class="title">
-                <label for="--verso-manual-toc-Intro" class="toggle-split-toc"><input type="checkbox" class="toggle-split-toc" id="--verso-manual-toc-Intro" checked="checked"></label><span class="number">1.</span> <span class="current"><a href="Introduction/#Intro">Introduction</a></span></div>
-              <table><tr class="numbered"><td class="num">1.1.</td><td><a href="Introduction/#computers-and-theorem-proving">Computers and Theorem Proving</a></td></tr><tr class="numbered"><td class="num">1.2.</td><td><a href="Introduction/#about-lean">About Lean</a></td></tr><tr class="numbered"><td class="num">1.3.</td><td><a href="Introduction/#about-this-book">About this Book</a></td></tr><tr class="numbered"><td class="num">1.4.</td><td><a href="Introduction/#acknowledgments">Acknowledgments</a></td></tr></table></div>
+                <label for="--verso-manual-toc-Intro" class="toggle-split-toc"><input type="checkbox" class="toggle-split-toc" id="--verso-manual-toc-Intro" checked="checked"></label><span class="number">1.</span> <span class="current"><a href="Introduction/#Intro">引言</a></span></div>
+              <table><tr class="numbered"><td class="num">1.1.</td><td><a href="Introduction/#computers-and-theorem-proving">计算机与定理证明</a></td></tr><tr class="numbered"><td class="num">1.2.</td><td><a href="Introduction/#about-lean">关于 Lean</a></td></tr><tr class="numbered"><td class="num">1.3.</td><td><a href="Introduction/#about-this-book">关于本书</a></td></tr><tr class="numbered"><td class="num">1.4.</td><td><a href="Introduction/#acknowledgments">致谢</a></td></tr></table></div>
             </div>
           </div>
         <div class="last">
@@ -992,126 +1081,101 @@ window.onload = () => {
             </ul>
           </div>
         </nav>
+      <div class="toc-resize-handle"></div>
       <main><div class="content-wrapper">
           <nav class="prev-next-buttons">
-            <a class="local-button active" href="#" rel="prev" title=" Theorem Proving in Lean 4"><span class="arrow">←</span><span class="where"> Theorem Proving in Lean 4</span></a><a class="local-button active" href="Dependent-Type-Theory/#dependent-type-theory" rel="next" title="2. Dependent Type Theory"><span class="where">2. Dependent Type Theory</span><span class="arrow">→</span></a></nav>
+            <a class="local-button active" href="#" rel="prev" title=" Lean 4 定理证明"><span class="arrow">←</span><span class="where"> Lean 4 定理证明</span></a><a class="local-button active" href="Dependent-Type-Theory/#dependent-type-theory" rel="next" title="2. 依赖类型论"><span class="where">2. 依赖类型论</span><span class="arrow">→</span></a></nav>
           <section>
             <h1>
-              1. Introduction<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=Intro" title="Permalink">🔗</a></span></h1>
+              1. 引言<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=Intro" title="Permalink">🔗</a></span></h1>
             <section>
               <h2 id="computers-and-theorem-proving">
-                1.1. Computers and Theorem Proving<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=computers-and-theorem-proving" title="Permalink">🔗</a></span></h2>
+                1.1. 计算机与定理证明<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=computers-and-theorem-proving" title="Permalink">🔗</a></span></h2>
               <p>
-                <em>Formal verification</em> involves the use of logical and computational methods to establish claims that are expressed in
-precise mathematical terms. These can include ordinary mathematical theorems, as well as claims that pieces of hardware
-or software, network protocols, and mechanical and hybrid systems meet their specifications. In practice, there is not a
-sharp distinction between verifying a piece of mathematics and verifying the correctness of a system: formal
-verification requires describing hardware and software systems in mathematical terms, at which point establishing claims
-as to their correctness becomes a form of theorem proving. Conversely, the proof of a mathematical theorem may require a
-lengthy computation, in which case verifying the truth of the theorem requires verifying that the computation does what
-it is supposed to do.</p>
+                <em>形式化验证</em> 使用逻辑和计算方法来确立以精确数学术语表述的断言。这些断言既可以包括通常的数学定理，也可以包括关于硬件或软件、
+网络协议，以及机械系统和混合系统是否满足其规约的断言。在实践中，验证一段数学内容与验证一个系统的正确性之间并没有泾渭分明的界限：
+形式化验证需要用数学术语描述硬件和软件系统；在这一点上，确立关于其正确性的断言就成为一种定理证明。反过来，一个数学定理的证明可能需要
+冗长的计算；在这种情况下，验证该定理为真就需要验证该计算确实完成了它应当完成的任务。</p>
               <p>
-                The gold standard for supporting a mathematical claim is to provide a proof, and twentieth-century developments in logic
-show most if not all conventional proof methods can be reduced to a small set of axioms and rules in any of a number of
-foundational systems. With this reduction, there are two ways that a computer can help establish a claim: it can help
-find a proof in the first place, and it can help verify that a purported proof is correct.</p>
+                支持一个数学断言的黄金标准是给出证明，而二十世纪逻辑学的发展表明，在多种基础系统中的任意一种之内，绝大多数（即便不是全部）传统证明方法
+都可以化约为一小组公理和规则。有了这种化约，计算机可以通过两种方式帮助确立一个断言：它首先可以帮助寻找证明，也可以帮助验证一个声称的证明
+是否正确。</p>
               <p>
-                <em>Automated theorem proving</em> focuses on the “finding” aspect. Resolution theorem provers, tableau theorem provers, fast
-satisfiability solvers, and so on provide means of establishing the validity of formulas in propositional and
-first-order logic. Other systems provide search procedures and decision procedures for specific languages and domains,
-such as linear or nonlinear expressions over the integers or the real numbers. Architectures like SMT ("satisfiability
-modulo theories”) combine domain-general search methods with domain-specific procedures. Computer algebra systems and
-specialized mathematical software packages provide means of carrying out mathematical computations, establishing
-mathematical bounds, or finding mathematical objects. A calculation can be viewed as a proof as well, and these systems,
-too, help establish mathematical claims.</p>
+                <em>自动定理证明</em> 关注“寻找”这一方面。归结定理证明器、语义表定理证明器、快速可满足性求解器等，为确立命题逻辑和一阶逻辑中公式的有效性
+提供了手段。其他系统则为特定语言和领域提供搜索过程和判定过程，例如整数或实数上的线性或非线性表达式。诸如 SMT（可满足性模理论，satisfiability
+modulo theories）这样的架构，将领域通用的搜索方法与领域专用的过程结合起来。计算机代数系统和专门的数学软件包
+提供了执行数学计算、确立数学界限或寻找数学对象的手段。计算也可以被视为一种证明，因此这些系统同样有助于确立数学断言。</p>
               <p>
-                Automated reasoning systems strive for power and efficiency, often at the expense of guaranteed soundness. Such systems
-can have bugs, and it can be difficult to ensure that the results they deliver are correct. In contrast, <em>interactive
-theorem proving</em> focuses on the “verification” aspect of theorem proving, requiring that every claim is supported by a
-proof in a suitable axiomatic foundation. This sets a very high standard: every rule of inference and every step of a
-calculation has to be justified by appealing to prior definitions and theorems, all the way down to basic axioms and
-rules. In fact, most such systems provide fully elaborated “proof objects” that can be communicated to other systems and
-checked independently. Constructing such proofs typically requires much more input and interaction from users, but it
-allows you to obtain deeper and more complex proofs.</p>
+                自动推理系统追求能力和效率，往往以牺牲有保证的可靠性为代价。此类系统可能存在缺陷，也可能难以确保它们给出的结果是正确的。相比之下，
+<em>交互式定理证明</em> 关注定理证明中“验证”的方面，要求每一个断言都由适当公理化基础中的一个证明来支持。这设定了非常高的标准：每一条推理规则、
+每一个计算步骤，都必须通过诉诸既有定义和定理而得到辩护，并一直追溯到基本公理和规则。事实上，大多数这样的系统会给出完全细化的
+“证明对象”，它们可以被传递给其他系统并独立检查。构造这样的证明通常需要用户提供更多输入并进行更多交互，但它使你能够获得更深入、更复杂的证明。</p>
               <p>
-                The <em>Lean Theorem Prover</em> aims to bridge the gap between interactive and automated theorem proving, by situating
-automated tools and methods in a framework that supports user interaction and the construction of fully specified
-axiomatic proofs. The goal is to support both mathematical reasoning and reasoning about complex systems, and to verify
-claims in both domains.</p>
+                <em>Lean Theorem Prover</em> 旨在弥合交互式定理证明与自动定理证明之间的鸿沟：它把自动化工具和方法置于一个既支持用户交互、又支持构造完全指定的
+公理化证明的框架之中。其目标是同时支持数学推理和关于复杂系统的推理，并验证这两个领域中的断言。</p>
               <p>
-                Lean's underlying logic has a computational interpretation, and Lean can be viewed equally well as a programming
-language. More to the point, it can be viewed as a system for writing programs with a precise semantics, as well as
-reasoning about the functions that the programs compute. Lean also has mechanisms to serve as its own <em>metaprogramming
-language</em>, which means that you can implement automation and extend the functionality of Lean using Lean itself. These
-aspects of Lean are described in the free online book, <a href="https://lean-lang.org/functional_programming_in_lean/">Functional Programming in Lean</a>, though computational
-aspects of the system will make an appearance here.</p>
+                Lean 的底层逻辑具有计算解释，因此 Lean 同样可以被看作一种编程语言。更切要地说，它可以被视为一个用于编写具有精确语义的程序的系统，
+也可以用于推理这些程序所计算的函数。Lean 还具有充当自身 <em>元编程语言</em> 的机制，这意味着你可以使用 Lean 本身实现自动化并扩展 Lean 的功能。
+Lean 的这些方面在免费在线书籍 <a href="https://lean-lang.org/functional_programming_in_lean/">Functional Programming in Lean</a> 中有所说明，不过本书也会涉及该系统的计算层面。</p>
               </section>
             <section>
               <h2 id="about-lean">
-                1.2. About Lean<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=about-lean" title="Permalink">🔗</a></span></h2>
+                1.2. 关于 Lean<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=about-lean" title="Permalink">🔗</a></span></h2>
               <p>
-                The <em>Lean</em> project was launched by Leonardo de Moura at Microsoft Research Redmond in 2013. It is an ongoing, long-term
-effort, and much of the potential for automation will be realized only gradually over time. Lean is released under the
-<a href="https://github.com/leanprover/lean4/blob/master/LICENSE">Apache 2.0 license</a>, a permissive open source license that permits others to use and extend the code and
-mathematical libraries freely.</p>
+                <em>Lean</em> 项目由 Leonardo de Moura 于 2013 年在 Microsoft Research Redmond 发起。这是一项持续进行的长期工作，其自动化方面的许多潜力
+只会随着时间推移逐步实现。Lean 以 <a href="https://github.com/leanprover/lean4/blob/master/LICENSE">Apache 2.0 许可证</a> 发布；这是一种宽松的开源许可证，允许他人自由使用和扩展其代码与
+数学库。</p>
               <p>
-                To install Lean in your computer consider using the <a href="https://lean-lang.org/install/">Quickstart</a> instructions. The Lean source code, and instructions for building Lean, are available at
-<a href="https://github.com/leanprover/lean4/">https://github.com/leanprover/lean4/</a>.</p>
+                若要在你的计算机上安装 Lean，可考虑使用 <a href="https://lean-lang.org/install/">Quickstart</a> 说明。Lean 的源代码以及构建 Lean 的说明可在
+<a href="https://github.com/leanprover/lean4/">https://github.com/leanprover/lean4/</a> 获取。</p>
               <p>
-                This tutorial describes the current version of Lean, known as Lean 4.</p>
+                本教程描述的是当前版本的 Lean，即 Lean 4。</p>
               </section>
             <section>
               <h2 id="about-this-book">
-                1.3. About this Book<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=about-this-book" title="Permalink">🔗</a></span></h2>
+                1.3. 关于本书<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=about-this-book" title="Permalink">🔗</a></span></h2>
               <p>
-                This book is designed to teach you to develop and verify proofs in Lean. Much of the background information you will
-need in order to do this is not specific to Lean at all. To start with, you will learn the logical system that Lean is
-based on, a version of <em>dependent type theory</em> that is powerful enough to prove almost any conventional mathematical
-theorem, and expressive enough to do it in a natural way. More specifically, Lean is based on a version of a system
-known as the Calculus of Constructions with inductive types. Lean can not only define mathematical objects and express
-mathematical assertions in dependent type theory, but it also can be used as a language for writing proofs.</p>
+                本书旨在教你在 Lean 中发展并验证证明。为此所需的许多背景知识其实并不专属于 Lean。首先，你将学习 Lean 所基于的逻辑系统：
+一种 <em>依赖类型论</em> 的版本；它强大到足以证明几乎任何传统数学定理，也具有足够的表达力，能以自然的方式完成这些证明。更具体地说，
+Lean 基于一种被称为带归纳类型的构造演算的系统。Lean 不仅能够在依赖类型论中定义数学对象、表达数学断言，还可以作为书写证明的语言使用。</p>
               <p>
-                Because fully detailed axiomatic proofs are so complicated, the challenge of theorem proving is to have the computer
-fill in as many of the details as possible. You will learn various methods to support this in <a href="Dependent-Type-Theory/#dependent-type-theory">dependent type
-theory</a>. For example, term rewriting, and Lean's automated methods for simplifying terms and
-expressions automatically. Similarly, methods of <em>elaboration</em> and <em>type inference</em>, which can be used to support
-flexible forms of algebraic reasoning.</p>
+                由于完全详细的公理化证明极其复杂，定理证明的挑战在于让计算机尽可能填补更多细节。你将在 <a href="Dependent-Type-Theory/#dependent-type-theory">依赖类型论</a>
+中学习支持这一目标的多种方法。例如，项重写，以及 Lean 自动简化项和表达式的自动化方法。同样，你也会学习 <em>细化</em> 与 <em>类型推断</em> 的方法；
+它们可用于支持灵活形式的代数推理。</p>
               <p>
-                Finally, you will learn about features that are specific to Lean, including the language you use to communicate
-with the system, and the mechanisms Lean offers for managing complex theories and data.</p>
+                最后，你将学习 Lean 所特有的一些功能，包括你用来与系统通信的语言，以及 Lean 为管理复杂理论和数据所提供的机制。</p>
               <p>
-                Throughout the text you will find examples of Lean code like the one below:</p>
+                在全文中，你会看到如下所示的 Lean 代码示例：</p>
               <div class="example" id="--verso-unique-0">
-                <code class="hl lean block" data-lean-context="examples"><span class="keyword token" data-binding="kw-occ-Lean.Parser.Command.theorem-0">theorem</span><span class="inter-text"> </span><span class="const token" data-binding="const-and_commutative" data-verso-hover="0" id="and_commutative">and_commutative</span><span class="inter-text"> </span><span class="unknown token" data-binding="">(</span><span class="var token" data-binding="var-_uniq.2" data-verso-hover="1">p</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.4" data-verso-hover="1">q</span><span class="inter-text"> </span><span class="unknown token" data-binding="">:</span><span class="inter-text"> </span><span class="sort token" data-binding="sort-14430969920833713138" data-verso-hover="2">Prop</span><span class="unknown token" data-binding="">)</span><span class="inter-text"> </span><span class="unknown token" data-binding="">:</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.2" data-verso-hover="1">p</span><span class="inter-text"> </span><span class="unknown token" data-binding="">∧</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.4" data-verso-hover="1">q</span><span class="inter-text"> </span><span class="unknown token" data-binding="">→</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.4" data-verso-hover="1">q</span><span class="inter-text"> </span><span class="unknown token" data-binding="">∧</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.2" data-verso-hover="1">p</span><span class="inter-text"> </span><span class="unknown token" data-binding="">:=</span><span class="inter-text">
-  </span><span class="keyword token" data-binding="kw-occ-Lean.Parser.Term.fun-64">fun</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.12" data-verso-hover="3">hpq</span><span class="inter-text"> </span><span class="unknown token" data-binding="">:</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.2" data-verso-hover="1">p</span><span class="inter-text"> </span><span class="unknown token" data-binding="">∧</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.4" data-verso-hover="1">q</span><span class="inter-text"> </span><span class="unknown token" data-binding="">=&gt;</span><span class="inter-text">
-  </span><span class="keyword token" data-binding="kw-occ-Lean.Parser.Term.have-87" data-verso-hover="4">have</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.16" data-verso-hover="5">hp</span><span class="inter-text"> </span><span class="unknown token" data-binding="">:</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.2" data-verso-hover="1">p</span><span class="inter-text"> </span><span class="unknown token" data-binding="">:=</span><span class="inter-text"> </span><a href="https://lean-lang.org/doc/reference/4.26.0/Basic-Propositions/Logical-Connectives/#And___intro" title="Documentation for And.left in Lean Language Reference"><span class="const token" data-binding="const-And.left" data-verso-hover="6">And.left</span></a><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.12" data-verso-hover="3">hpq</span><span class="inter-text">
-  </span><span class="keyword token" data-binding="kw-occ-Lean.Parser.Term.have-117" data-verso-hover="4">have</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.20" data-verso-hover="7">hq</span><span class="inter-text"> </span><span class="unknown token" data-binding="">:</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.4" data-verso-hover="1">q</span><span class="inter-text"> </span><span class="unknown token" data-binding="">:=</span><span class="inter-text"> </span><a href="https://lean-lang.org/doc/reference/4.26.0/Basic-Propositions/Logical-Connectives/#And___intro" title="Documentation for And.right in Lean Language Reference"><span class="const token" data-binding="const-And.right" data-verso-hover="8">And.right</span></a><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.12" data-verso-hover="3">hpq</span><span class="inter-text">
-  </span><span class="keyword token" data-binding="kw-occ-Lean.Parser.Term.show-148">show</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.4" data-verso-hover="1">q</span><span class="inter-text"> </span><span class="unknown token" data-binding="">∧</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.2" data-verso-hover="1">p</span><span class="inter-text"> </span><span class="keyword token" data-binding="kw-occ-Lean.Parser.Term.fromTerm-161">from</span><span class="inter-text"> </span><a href="https://lean-lang.org/doc/reference/4.26.0/Basic-Propositions/Logical-Connectives/#And___intro" title="Documentation for And.intro in Lean Language Reference"><span class="const token" data-binding="const-And.intro" data-verso-hover="9">And.intro</span></a><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.20" data-verso-hover="7">hq</span><span class="inter-text"> </span><span class="unknown token" data-binding="">hp</span><span class="inter-text">
+                <code class="hl lean block" data-lean-context="examples"><span class="keyword token" data-binding="kw-occ-Lean.Parser.Command.theorem-0">theorem</span><span class="inter-text"> </span><span class="const token" data-binding="const-and_commutative" data-verso-hover="0" id="and_commutative">and_commutative</span><span class="inter-text"> </span><span class="punctuation bracket token" data-binding="kw-occ-Lean.Parser.Term.explicitBinder-24">(</span><span class="var token" data-binding="var-_uniq.2" data-verso-hover="1">p</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.4" data-verso-hover="1">q</span><span class="inter-text"> </span><span class="built-in delim token" data-binding="kw-occ-Lean.Parser.Term.explicitBinder-24">:</span><span class="inter-text"> </span><span class="sort token" data-binding="sort-14430969920833713138" data-verso-hover="2">Prop</span><span class="punctuation bracket token" data-binding="kw-occ-Lean.Parser.Term.explicitBinder-24">)</span><span class="inter-text"> </span><span class="built-in delim token" data-binding="kw-occ-Lean.Parser.Term.typeSpec-37">:</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.2" data-verso-hover="1">p</span><span class="inter-text"> </span><span class="punctuation operator token" data-binding="kw-occ-«term_∧_»-39">∧</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.4" data-verso-hover="1">q</span><span class="inter-text"> </span><span class="punctuation operator token" data-binding="kw-occ-Lean.Parser.Term.arrow-39">→</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.4" data-verso-hover="1">q</span><span class="inter-text"> </span><span class="punctuation operator token" data-binding="kw-occ-«term_∧_»-51">∧</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.2" data-verso-hover="1">p</span><span class="inter-text"> </span><span class="built-in delim token" data-binding="kw-occ-Lean.Parser.Command.declValSimple-59">:=</span><span class="inter-text">
+  </span><span class="keyword token" data-binding="kw-occ-Lean.Parser.Term.fun-64">fun</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.12" data-verso-hover="3">hpq</span><span class="inter-text"> </span><span class="built-in delim token" data-binding="kw-occ-Lean.Parser.Term.typeSpec-72">:</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.2" data-verso-hover="1">p</span><span class="inter-text"> </span><span class="punctuation operator token" data-binding="kw-occ-«term_∧_»-74">∧</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.4" data-verso-hover="1">q</span><span class="inter-text"> </span><span class="built-in delim token" data-binding="kw-occ-Lean.Parser.Term.basicFun-68">=&gt;</span><span class="inter-text">
+  </span><span class="keyword token" data-binding="kw-occ-Lean.Parser.Term.have-87" data-verso-hover="4">have</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.16" data-verso-hover="5">hp</span><span class="inter-text"> </span><span class="built-in delim token" data-binding="kw-occ-Lean.Parser.Term.typeSpec-95">:</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.2" data-verso-hover="1">p</span><span class="inter-text"> </span><span class="built-in delim token" data-binding="kw-occ-Lean.Parser.Term.letIdDecl-92">:=</span><span class="inter-text"> </span><span class="const token" data-binding="const-And.left" data-verso-hover="6">And.left</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.12" data-verso-hover="3">hpq</span><span class="inter-text">
+  </span><span class="keyword token" data-binding="kw-occ-Lean.Parser.Term.have-117" data-verso-hover="4">have</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.20" data-verso-hover="7">hq</span><span class="inter-text"> </span><span class="built-in delim token" data-binding="kw-occ-Lean.Parser.Term.typeSpec-125">:</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.4" data-verso-hover="1">q</span><span class="inter-text"> </span><span class="built-in delim token" data-binding="kw-occ-Lean.Parser.Term.letIdDecl-122">:=</span><span class="inter-text"> </span><span class="const token" data-binding="const-And.right" data-verso-hover="8">And.right</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.12" data-verso-hover="3">hpq</span><span class="inter-text">
+  </span><span class="keyword token" data-binding="kw-occ-Lean.Parser.Term.show-148">show</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.4" data-verso-hover="1">q</span><span class="inter-text"> </span><span class="punctuation operator token" data-binding="kw-occ-«term_∧_»-153">∧</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.2" data-verso-hover="1">p</span><span class="inter-text"> </span><span class="keyword token" data-binding="kw-occ-Lean.Parser.Term.fromTerm-161">from</span><span class="inter-text"> </span><span class="const token" data-binding="const-And.intro" data-verso-hover="9">And.intro</span><span class="inter-text"> </span><span class="var token" data-binding="var-_uniq.20" data-verso-hover="7">hq</span><span class="inter-text"> </span><span class="unknown token" data-binding="">hp</span><span class="inter-text">
 </span></code><code class="hl lean block" data-lean-context="examples"><span class="unknown token" data-binding=""></span></code></div>
               <script>
                 addCopyButtonToElement("--verso-unique-0", "theorem and_commutative (p q : Prop) : p ∧ q → q ∧ p :=\n  fun hpq : p ∧ q =>\n  have hp : p := And.left hpq\n  have hq : q := And.right hpq\n  show q ∧ p from And.intro hq hp\n");</script>
               <p>
-                Next to every code example in this book, you will see a button that reads “Copy to clipboard”.
-Pressing the button copies the example with enough surrounding context to make the code compile correctly.
-You can paste the example code into <a href="https://code.visualstudio.com/">VS Code</a> and modify the examples, and Lean will check the results and provide feedback continuously as you type.
-We recommend running the examples and experimenting with the code on your own as you work through the chapters that follow.
-You can open this book in VS Code by using the command “Lean 4: Docs: Show Documentation Resources” and selecting “Theorem Proving in Lean 4” in the tab that opens.</p>
+                在本书的每个代码示例旁，你都会看到一个标为 “Copy to clipboard” 的按钮。
+按下该按钮会复制示例，并附带足够的上下文，使代码能够正确编译。
+你可以将示例代码粘贴到 <a href="https://code.visualstudio.com/">VS Code</a> 中并修改这些示例；Lean 会在你输入时持续检查结果并提供反馈。
+我们建议你在阅读后续章节时亲自运行这些示例，并对代码进行实验。
+你可以在 VS Code 中使用命令 “Lean 4: Docs: Show Documentation Resources”，并在打开的标签页中选择 “Theorem Proving in Lean 4” 来打开本书。</p>
               </section>
             <section>
               <h2 id="acknowledgments">
-                1.4. Acknowledgments<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=acknowledgments" title="Permalink">🔗</a></span></h2>
+                1.4. 致谢<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=acknowledgments" title="Permalink">🔗</a></span></h2>
               <p>
-                This tutorial is an open access project maintained on Github. Many people have contributed to the effort, providing
-corrections, suggestions, examples, and text. We are grateful to Ulrik Buchholz, Kevin Buzzard, Mario Carneiro, Nathan
-Carter, Eduardo Cavazos, Amine Chaieb, Joe Corneli, William DeMeo, Marcus Klaas de Vries, Ben Dyer, Gabriel Ebner,
-Anthony Hart, Simon Hudon, Sean Leather, Assia Mahboubi, Gihan Marasingha, Patrick Massot, Christopher John Mazey,
-Sebastian Ullrich, Floris van Doorn, Daniel Velleman, Théo Zimmerman, Paul Chisholm, Chris Lovett, and Siddhartha Gadgil for their contributions.  Please see <a href="https://github.com/leanprover/">lean prover</a> and <a href="https://github.com/leanprover-community/">lean community</a> for an up to date list
-of our amazing contributors.
+                本教程是一个维护在 Github 上的开放获取项目。许多人为这项工作做出了贡献，提供了修正、建议、示例和文本。我们感谢 Ulrik Buchholz、Kevin Buzzard、
+Mario Carneiro、Nathan Carter、Eduardo Cavazos、Amine Chaieb、Joe Corneli、William DeMeo、Marcus Klaas de Vries、Ben Dyer、
+Gabriel Ebner、Anthony Hart、Simon Hudon、Sean Leather、Assia Mahboubi、Gihan Marasingha、Patrick Massot、Christopher John Mazey、
+Sebastian Ullrich、Floris van Doorn、Daniel Velleman、Théo Zimmerman、Paul Chisholm、Chris Lovett 和 Siddhartha Gadgil 的贡献。关于我们出色贡献者的最新名单，
+请参见 <a href="https://github.com/leanprover/">lean prover</a> 和 <a href="https://github.com/leanprover-community/">lean community</a>。
 </p>
               </section>
             </section>
           <nav class="prev-next-buttons">
-            <a class="local-button active" href="#" rel="prev" title=" Theorem Proving in Lean 4"><span class="arrow">←</span><span class="where"> Theorem Proving in Lean 4</span></a><a class="local-button active" href="Dependent-Type-Theory/#dependent-type-theory" rel="next" title="2. Dependent Type Theory"><span class="where">2. Dependent Type Theory</span><span class="arrow">→</span></a></nav>
+            <a class="local-button active" href="#" rel="prev" title=" Lean 4 定理证明"><span class="arrow">←</span><span class="where"> Lean 4 定理证明</span></a><a class="local-button active" href="Dependent-Type-Theory/#dependent-type-theory" rel="next" title="2. 依赖类型论"><span class="where">2. 依赖类型论</span><span class="arrow">→</span></a></nav>
           </div>
         </main></div>
     </body>

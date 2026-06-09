@@ -1,0 +1,1 @@
+window.docContents[145].resolve({"/Type-Classes/#scoped-instances":{"contents":"也可以在命名空间中声明作用域实例。这类实例只有在你位于该命名空间内部或打开该命名空间时才处于活动状态。\n\n\n\n可以使用命令 open scoped <namespace> 来激活作用域属性，但不会“打开”该命名空间中的名称。\n\n\n\n","context":"Lean 4 定理证明\u0009类型类","header":"10.7. 作用域实例","id":"/Type-Classes/#scoped-instances"}});

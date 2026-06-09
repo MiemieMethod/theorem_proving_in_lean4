@@ -1,0 +1,1 @@
+window.docContents[30].resolve({"/Type-Classes/#local-instances":{"contents":"在 Lean 中，类型类是使用属性实现的。因此，可以使用 local 修饰符表示它们只在当前 section 或 namespace 关闭之前有效，或一直有效到当前文件末尾。\n\n\n\n也可以使用 attribute 命令临时禁用一个实例，直到当前 section 或 namespace 关闭，或直到当前文件末尾。\n\n\n\n我们建议你只在诊断问题时使用此命令。\n\n","context":"Lean 4 定理证明\u0009类型类","header":"10.6. 局部实例","id":"/Type-Classes/#local-instances"}});

@@ -1,0 +1,1 @@
+window.docContents[185].resolve({"/#theorem-proving-in-lean-4-zh":{"contents":"本书此版本假定你使用 Lean 4（具体为 4.29.0-rc7）。安装 Lean 请参见\nLean 文档中的\n快速入门。\n本书的第一版是为 Lean 2 编写的，Lean 3 版本见\n此处。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n","context":"","header":"Lean 4 定理证明","id":"/#theorem-proving-in-lean-4-zh"}});

@@ -8,28 +8,58 @@
     window.location.replace(`${proto}//${hostName}${path}/${srch}${hsh}`);
   }
 })()</script>
+    <script>
+      // Enable TypeScript checking.
+// @ts-check
+
+// Applies a saved table-of-contents width before the first paint.
+//
+// This is a tiny inline counterpart to toc-resize.js: it runs in the page head so that
+// returning desktop readers do not see the default width flash to their saved width.
+// It only records the width in the --verso-toc-user-width custom property; the
+// stylesheet clamps it and ignores it on mobile, and toc-resize.js then takes over the
+// interactive resizing. Keep the storage key in sync with toc-resize.js.
+
+(function () {
+    try {
+        const saved = localStorage.getItem("verso-toc-width");
+        // Parse to a number (as toc-resize.js does) and write that back, so a stored
+        // value with stray whitespace becomes a valid length rather than `" 420 px"`.
+        const width = saved === null ? NaN : Number(saved);
+        if (Number.isFinite(width)) {
+            document.documentElement.style.setProperty("--verso-toc-user-width", `${width}px`);
+        }
+    } catch (_) {
+        // Leave the default width in place when local storage is unavailable.
+    }
+})();
+</script>
     <base href="./"><meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>Theorem Proving in Lean 4</title><link rel="stylesheet" href="book.css">
+    <title>Lean 4 定理证明</title><link rel="stylesheet" href="book.css">
     <link rel="stylesheet" href="verso-vars.css">
     <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js" integrity="sha384-zbcZAIxlvJtNE3Dp5nxLXdXtXyxwOdnILY1TDPVmKFhl4r4nSUG1r8bcFXGVa4Te" crossorigin="anonymous"></script>
-    <script src="-verso-search/elasticlunr.min.js"></script>
-    <script src="-verso-search/fuzzysort.min.js"></script>
-    <script src="-verso-search/searchIndex.js"></script>
+    <script defer="defer" src="-verso-search/elasticlunr.min.js"></script>
+    <script defer="defer" src="-verso-search/fuzzysort.min.js"></script>
+    <script defer="defer" src="-verso-search/searchIndex.js"></script>
+    <script defer="defer" src="-verso-search/search-config.js"></script>
     <script type="module" src="-verso-search/search-init.js"></script>
     <link rel="stylesheet" href="-verso-search/search-box.css">
+    <link rel="stylesheet" href="-verso-search/search-page.css">
     <link rel="stylesheet" href="-verso-search/search-highlight.css">
     <link rel="stylesheet" href="-verso-search/domain-display.css">
-    <script src="-verso-data/popper.min.js"></script>
+    <script src="-verso-search/search-highlight.js" defer="defer"></script>
+    <script src="toc-resize.js" defer="defer"></script>
+    <script src="-verso-data/katex/katex.js"></script>
     <script src="-verso-data/katex/math.js"></script>
+    <script src="-verso-data/popper.min.js"></script>
     <script src="-verso-data/copybutton.js"></script>
     <script src="-verso-data/tippy-bundle.umd.min.js"></script>
-    <script src="-verso-data/katex/katex.js"></script>
     <link rel="stylesheet" href="-verso-data/tippy-border.css">
-    <link rel="stylesheet" href="-verso-data/katex/katex.css">
     <link rel="stylesheet" href="-verso-data/proof-state.css">
     <link rel="stylesheet" href="-verso-data/copybutton.css">
     <link rel="stylesheet" href="-verso-data/examples.css">
+    <link rel="stylesheet" href="-verso-data/katex/katex.css">
     <style>/static/fonts/source-code-pro/source-code-pro.css</style><style>
 table.tabular {
   margin: auto;
@@ -136,6 +166,21 @@ a.technical-term:hover {
   font-family: var(--verso-code-font-family,);
 }
 
+/* These lexically-classified token kinds default to the `.unknown` appearance. The rule follows
+   `.const` so it wins for the `anon-ctor` tokens, which also carry the `const` class. */
+.hl.lean .anon-ctor,
+.hl.lean .number,
+.hl.lean .char,
+.hl.lean .comment,
+.hl.lean .punctuation,
+.hl.lean .delim,
+.hl.lean .wildcard {
+  color: var(--verso-code-color,);
+  font-weight: normal;
+  font-style: normal;
+  font-family: var(--verso-code-font-family,);
+}
+
 .hover-container {
   width: 0;
   height: 0;
@@ -218,7 +263,7 @@ a.technical-term:hover {
 }
 
 @media (hover: hover) {
-  .hl.lean .token.binding-hl, .hl.lean .literal.string:hover, .hl.lean .token.typed:hover {
+  .hl.lean .token.binding-hl, .hl.lean .literal:hover, .hl.lean .token.typed:hover {
     background-color: #eee;
     border-radius: 2px;
     transition: none;
@@ -398,7 +443,7 @@ a.technical-term:hover {
   text-size-adjust: 100%;
 }
 
-.hl.lean .tactic:has(.tactic-toggle:checked) {
+.hl.lean .tactic:has(> .tactic-toggle:checked) {
   display: inline-grid;
   grid-template-columns: 1fr;
 }
@@ -417,7 +462,10 @@ a.technical-term:hover {
 }
 
 @media (hover: hover) {
-  .hl.lean .tactic:has(.tactic-toggle:not(:checked)) > label:hover {
+  /* Highlight a region on hover only when its own toggle is unchecked, and only the innermost
+     hovered region: `label:hover` bubbles to ancestor labels, so suppress the highlight on a region
+     whose label contains a more deeply nested hovered tactic label. */
+  .hl.lean .tactic:has(> .tactic-toggle:not(:checked)) > label:hover:not(:has(.tactic > label:hover)) {
     background-color: #eeeeee;
   }
 }
@@ -618,7 +666,6 @@ Some CSS frameworks customize details/summary in ways not compatible with Verso'
   /* Without these, mobile Safari will start making font sizes inconsistent when its text size adjustment feature is triggered.*/
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-
 }
 
 .tippy-box[data-theme~='lean'] {
@@ -768,7 +815,7 @@ window.onload = () => {
       let parent = elem.parentNode;
       while (parent && "classList" in parent) {
         if (parent.classList.contains("tactic")) {
-          const toggle = parent.querySelector("input.tactic-toggle");
+          const toggle = parent.querySelector(":scope > input.tactic-toggle");
           if (toggle) {
             return !toggle.checked;
           }
@@ -778,41 +825,50 @@ window.onload = () => {
       return false;
     }
 
+    // Track whether any tippy is visible (O(1) check instead of DOM scan)
+    let visibleTippyCount = 0;
     function blockedByTippy(elem) {
-      // Don't show a new hover until the old ones are all closed.
-      // Scoped to the nearest "top-level block" to avoid being O(n) in the size of the document.
-      var block = elem;
-      const topLevel = new Set(["section", "body", "html", "nav", "header"]);
-      while (block.parentNode && !topLevel.has(block.parentNode.nodeName.toLowerCase())) {
-        block = block.parentNode;
-      }
-      for (const child of block.querySelectorAll(".token, .has-info")) {
-        if (child._tippy && child._tippy.state.isVisible) { return true };
-      }
-      return false;
+      return visibleTippyCount > 0;
     }
 
-    for (const c of document.querySelectorAll(".hl.lean .token")) {
-        if (c.dataset.binding != "") {
-            c.addEventListener("mouseover", (event) => {
-                if (blockedByTactic(c)) {return;}
-                const context = c.closest(".hl.lean").dataset.leanContext;
-                for (const example of document.querySelectorAll(".hl.lean")) {
-                    if (example.dataset.leanContext == context) {
-                        for (const tok of example.querySelectorAll(".token")) {
-                            if (c.dataset.binding == tok.dataset.binding) {
-                                tok.classList.add("binding-hl");
-                            }
-                        }
-                    }
-                }
-            });
-        }
-        c.addEventListener("mouseout", (event) => {
-            for (const tok of document.querySelectorAll(".hl.lean .token")) {
-                tok.classList.remove("binding-hl");
+    // Binding highlights via event delegation with cached lookups
+    const bindingCache = new Map(); // context+binding -> [token elements]
+    let highlightedTokens = [];
+    function getBindingTokens(context, binding) {
+      const key = context + "\0" + binding;
+      let tokens = bindingCache.get(key);
+      if (!tokens) {
+        tokens = [];
+        for (const example of document.querySelectorAll(".hl.lean")) {
+          if (example.dataset.leanContext == context) {
+            for (const tok of example.querySelectorAll(".token[data-binding=\"" + CSS.escape(binding) + "\"]")) {
+              tokens.push(tok);
             }
-        });
+          }
+        }
+        bindingCache.set(key, tokens);
+      }
+      return tokens;
+    }
+    for (const container of document.querySelectorAll(".hl.lean")) {
+      container.addEventListener("mouseover", (event) => {
+        const c = event.target.closest(".token");
+        if (!c || !c.dataset.binding || c.dataset.binding === "" || !container.contains(c)) return;
+        if (blockedByTactic(c)) return;
+        const tokens = getBindingTokens(container.dataset.leanContext, c.dataset.binding);
+        for (const tok of tokens) {
+          tok.classList.add("binding-hl");
+        }
+        highlightedTokens = tokens;
+      });
+      container.addEventListener("mouseout", (event) => {
+        const c = event.target.closest(".token");
+        if (!c || !container.contains(c)) return;
+        for (const tok of highlightedTokens) {
+          tok.classList.remove("binding-hl");
+        }
+        highlightedTokens = [];
+      });
     }
     /* Render docstrings */
     if ('undefined' !== typeof marked) {
@@ -856,13 +912,12 @@ window.onload = () => {
         followCursor: 'initial',
         onShow(inst) {
           if (inst.reference.className == 'tactic') {
-
-            const toggle = inst.reference.querySelector("input.tactic-toggle");
+            const toggle = inst.reference.querySelector(":scope > input.tactic-toggle");
             if (toggle && toggle.checked) {
               return false;
             }
             hideParentTooltips(inst.reference);
-            //if (blockedByTippy(inst.reference)) { return false; }
+            if (blockedByTippy(inst.reference)) { return false; }
 
           } else if (inst.reference.querySelector(".hover-info") || "versoHover" in inst.reference.dataset) {
             if (blockedByTactic(inst.reference)) { return false };
@@ -871,10 +926,12 @@ window.onload = () => {
             return false;
           }
         },
+        onShown(inst) { visibleTippyCount++; },
+        onHidden(inst) { visibleTippyCount = Math.max(0, visibleTippyCount - 1); },
         content (tgt) {
           const content = document.createElement("span");
           if (tgt.className == 'tactic') {
-            const state = tgt.querySelector(".tactic-state").cloneNode(true);
+            const state = tgt.querySelector(":scope > .tactic-state").cloneNode(true);
             state.style.display = "block";
             content.appendChild(state);
             content.style.display = "block";
@@ -950,12 +1007,44 @@ window.onload = () => {
       document.querySelectorAll('.hl.lean .tactic').forEach(element => {
         element.setAttribute('data-tippy-theme', 'tactic');
       });
-      let insts = tippy('.hl.lean .const.token, .hl.lean .keyword.token, .hl.lean .literal.token, .hl.lean .option.token, .hl.lean .var.token, .hl.lean .typed.token, .hl.lean .has-info, .hl.lean .tactic, .hl.lean .level-var, .hl.lean .level-const, .hl.lean .level-op, .hl.lean .sort', defaultTippyProps);
+      // Skip tokens inside closed tactics — they interfere with tactic tippys
+      const closedTactics = new Set();
+      document.querySelectorAll('.hl.lean .tactic').forEach(tactic => {
+        const toggle = tactic.querySelector(':scope > input.tactic-toggle');
+        if (toggle && !toggle.checked) closedTactics.add(tactic);
+      });
+      function isInsideClosedTactic(el) {
+        const tactic = el.closest('.tactic');
+        return tactic && tactic !== el && closedTactics.has(tactic);
+      }
+
+      const tokenSelector = '.hl.lean .const.token, .hl.lean .keyword.token, .hl.lean .literal.token, .hl.lean .option.token, .hl.lean .var.token, .hl.lean .typed.token, .hl.lean .has-info, .hl.lean .tactic, .hl.lean .level-var, .hl.lean .level-const, .hl.lean .level-op, .hl.lean .sort';
+      tippy(Array.from(document.querySelectorAll(tokenSelector)).filter(el => !isInsideClosedTactic(el)), defaultTippyProps);
+
+      // Create/destroy token tippys when tactic checkbox toggles
+      const tacticTippySelector = '.const.token, .keyword.token, .literal.token, .option.token, .var.token, .typed.token, .has-info, .level-var, .level-const, .level-op, .sort';
+      document.querySelectorAll('.hl.lean .tactic').forEach(tactic => {
+        const toggle = tactic.querySelector(':scope > input.tactic-toggle');
+        if (toggle) toggle.addEventListener('change', () => {
+          if (toggle.checked) {
+            closedTactics.delete(tactic);
+            tactic.querySelectorAll('.token').forEach(tok => {
+              if (!tok._tippy && tok.matches(tacticTippySelector)) {
+                tippy(tok, defaultTippyProps);
+              }
+            });
+          } else {
+            closedTactics.add(tactic);
+            tactic.querySelectorAll('.token').forEach(tok => {
+              if (tok._tippy) tok._tippy.destroy();
+            });
+          }
+        });
+      });
   });
 }
 </script>
     <script defer="defer" data-domain="lean-lang.org" src="https://plausible.io/js/script.outbound-links.js"></script>
-    <script src="-verso-search/search-highlight.js" defer="defer"></script>
     </head>
   <body>
     <header>
@@ -963,7 +1052,7 @@ window.onload = () => {
         <a href="" id="logo"><img src="static/lean_logo.svg"></a></div>
       <div class="header-title-wrapper">
         <a href="" class="header-title"><h1>
-            Theorem Proving in Lean 4</h1>
+            Lean 4 定理证明</h1>
           </a></div>
       </header>
     <label for="toggle-toc" id="toggle-toc-click"><span class="line line1"></span><span class="line line2"></span><span class="line line3"></span></label><div class="with-toc">
@@ -971,12 +1060,12 @@ window.onload = () => {
       <nav id="toc">
         <input type="checkbox" id="toggle-toc"><div class="first">
           <a href="" class="toc-title"><h1>
-              Theorem Proving in Lean 4</h1>
+              Lean 4 定理证明</h1>
             </a><div class="split-tocs">
             <div class="split-toc book">
               <div class="title">
                 <label for="--verso-manual-toc-----bookRoot" class="toggle-split-toc"><input type="checkbox" class="toggle-split-toc" id="--verso-manual-toc-----bookRoot" checked="checked"></label><span class="">Table of Contents</span></div>
-              <table><tr class="numbered"><td class="num">1.</td><td><a href="Introduction/#Intro">Introduction</a></td></tr><tr class="numbered"><td class="num">2.</td><td><a href="Dependent-Type-Theory/#dependent-type-theory">Dependent Type Theory</a></td></tr><tr class="numbered"><td class="num">3.</td><td><a href="Propositions-and-Proofs/#propositions-and-proofs">Propositions and Proofs</a></td></tr><tr class="numbered"><td class="num">4.</td><td><a href="Quantifiers-and-Equality/#quantifiers-and-equality">Quantifiers and Equality</a></td></tr><tr class="numbered"><td class="num">5.</td><td><a href="Tactics/#Theorem-Proving-in-Lean-4--Tactics">Tactics</a></td></tr><tr class="numbered"><td class="num">6.</td><td><a href="Interacting-with-Lean/#Theorem-Proving-in-Lean-4--Interacting-with-Lean">Interacting with Lean</a></td></tr><tr class="numbered"><td class="num">7.</td><td><a href="Inductive-Types/#inductive-types">Inductive Types</a></td></tr><tr class="numbered"><td class="num">8.</td><td><a href="Induction-and-Recursion/#induction-and-recursion">Induction and Recursion</a></td></tr><tr class="numbered"><td class="num">9.</td><td><a href="Structures-and-Records/#structures-and-records">Structures and Records</a></td></tr><tr class="numbered"><td class="num">10.</td><td><a href="Type-Classes/#type-classes">Type Classes</a></td></tr><tr class="numbered"><td class="num">11.</td><td><a href="The-Conversion-Tactic-Mode/#conv">The Conversion Tactic Mode</a></td></tr><tr class="numbered"><td class="num">12.</td><td><a href="Axioms-and-Computation/#axioms-and-computation">Axioms and Computation</a></td></tr></table></div>
+              <table><tr class="numbered"><td class="num">1.</td><td><a href="Introduction/#Intro">引言</a></td></tr><tr class="numbered"><td class="num">2.</td><td><a href="Dependent-Type-Theory/#dependent-type-theory">依赖类型论</a></td></tr><tr class="numbered"><td class="num">3.</td><td><a href="Propositions-and-Proofs/#propositions-and-proofs">命题与证明</a></td></tr><tr class="numbered"><td class="num">4.</td><td><a href="Quantifiers-and-Equality/#quantifiers-and-equality">量词与等式</a></td></tr><tr class="numbered"><td class="num">5.</td><td><a href="Tactics/#tactics">策略</a></td></tr><tr class="numbered"><td class="num">6.</td><td><a href="Interacting-with-Lean/#interacting-with-lean">与 Lean 交互</a></td></tr><tr class="numbered"><td class="num">7.</td><td><a href="Inductive-Types/#inductive-types">归纳类型</a></td></tr><tr class="numbered"><td class="num">8.</td><td><a href="Induction-and-Recursion/#induction-and-recursion">归纳与递归</a></td></tr><tr class="numbered"><td class="num">9.</td><td><a href="Structures-and-Records/#structures-and-records">结构与记录</a></td></tr><tr class="numbered"><td class="num">10.</td><td><a href="Type-Classes/#type-classes">类型类</a></td></tr><tr class="numbered"><td class="num">11.</td><td><a href="The-Conversion-Tactic-Mode/#conv">转换策略模式</a></td></tr><tr class="numbered"><td class="num">12.</td><td><a href="Axioms-and-Computation/#axioms-and-computation">公理与计算</a></td></tr></table></div>
             </div>
           </div>
         <div class="last">
@@ -988,59 +1077,60 @@ window.onload = () => {
             </ul>
           </div>
         </nav>
+      <div class="toc-resize-handle"></div>
       <main><div class="content-wrapper">
           <nav class="prev-next-buttons">
             <div></div>
-            <a class="local-button active" href="Introduction/#Intro" rel="next" title="1. Introduction"><span class="where">1. Introduction</span><span class="arrow">→</span></a></nav>
+            <a class="local-button active" href="Introduction/#Intro" rel="next" title="1. 引言"><span class="where">1. 引言</span><span class="arrow">→</span></a></nav>
           <section>
             <div class="titlepage">
               <h1>
-                 Theorem Proving in Lean 4</h1>
+                 Lean 4 定理证明<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=theorem-proving-in-lean-4-zh" title="Permalink">🔗</a></span></h1>
               <div class="authors">
                 <span class="author">Jeremy Avigad</span><span class="author">Leonardo de Moura</span><span class="author">Soonho Kong</span><span class="author">Sebastian Ullrich</span><p class="note">
-                  with contributions from the Lean Community</p>
+                  并有 Lean 社区贡献</p>
                 </div>
               <p>
-                This version of the text assumes you’re using Lean 4 (specifically <code>4.26.0</code>). See the
-<a href="https://lean-lang.org/documentation/setup/">Quickstart section</a> of
-the Lean documentation to install Lean. The first version of this book was
-written for Lean 2, and the Lean 3 version is available
-<a href="https://leanprover.github.io/theorem_proving_in_lean/">here</a>.</p>
+                本书此版本假定你使用 Lean 4（具体为 <code>4.29.0-rc7</code>）。安装 Lean 请参见
+Lean 文档中的
+<a href="https://lean-lang.org/documentation/setup/">快速入门</a>。
+本书的第一版是为 Lean 2 编写的，Lean 3 版本见
+<a href="https://leanprover.github.io/theorem_proving_in_lean/">此处</a>。</p>
               </div>
             <section>
               <h2>
                 Contents</h2>
               <ol class="section-toc">
                 <li>
-                  <a href="Introduction/#Intro"><span class="number">1.</span> Introduction</a></li>
+                  <a href="Introduction/#Intro"><span class="number">1.</span> 引言</a></li>
                 <li>
-                  <a href="Dependent-Type-Theory/#dependent-type-theory"><span class="number">2.</span> Dependent Type Theory</a></li>
+                  <a href="Dependent-Type-Theory/#dependent-type-theory"><span class="number">2.</span> 依赖类型论</a></li>
                 <li>
-                  <a href="Propositions-and-Proofs/#propositions-and-proofs"><span class="number">3.</span> Propositions and Proofs</a></li>
+                  <a href="Propositions-and-Proofs/#propositions-and-proofs"><span class="number">3.</span> 命题与证明</a></li>
                 <li>
-                  <a href="Quantifiers-and-Equality/#quantifiers-and-equality"><span class="number">4.</span> Quantifiers and Equality</a></li>
+                  <a href="Quantifiers-and-Equality/#quantifiers-and-equality"><span class="number">4.</span> 量词与等式</a></li>
                 <li>
-                  <a href="Tactics/#Theorem-Proving-in-Lean-4--Tactics"><span class="number">5.</span> Tactics</a></li>
+                  <a href="Tactics/#tactics"><span class="number">5.</span> 策略</a></li>
                 <li>
-                  <a href="Interacting-with-Lean/#Theorem-Proving-in-Lean-4--Interacting-with-Lean"><span class="number">6.</span> Interacting with Lean</a></li>
+                  <a href="Interacting-with-Lean/#interacting-with-lean"><span class="number">6.</span> 与 Lean 交互</a></li>
                 <li>
-                  <a href="Inductive-Types/#inductive-types"><span class="number">7.</span> Inductive Types</a></li>
+                  <a href="Inductive-Types/#inductive-types"><span class="number">7.</span> 归纳类型</a></li>
                 <li>
-                  <a href="Induction-and-Recursion/#induction-and-recursion"><span class="number">8.</span> Induction and Recursion</a></li>
+                  <a href="Induction-and-Recursion/#induction-and-recursion"><span class="number">8.</span> 归纳与递归</a></li>
                 <li>
-                  <a href="Structures-and-Records/#structures-and-records"><span class="number">9.</span> Structures and Records</a></li>
+                  <a href="Structures-and-Records/#structures-and-records"><span class="number">9.</span> 结构与记录</a></li>
                 <li>
-                  <a href="Type-Classes/#type-classes"><span class="number">10.</span> Type Classes</a></li>
+                  <a href="Type-Classes/#type-classes"><span class="number">10.</span> 类型类</a></li>
                 <li>
-                  <a href="The-Conversion-Tactic-Mode/#conv"><span class="number">11.</span> The Conversion Tactic Mode</a></li>
+                  <a href="The-Conversion-Tactic-Mode/#conv"><span class="number">11.</span> 转换策略模式</a></li>
                 <li>
-                  <a href="Axioms-and-Computation/#axioms-and-computation"><span class="number">12.</span> Axioms and Computation</a></li>
+                  <a href="Axioms-and-Computation/#axioms-and-computation"><span class="number">12.</span> 公理与计算</a></li>
                 </ol>
               </section>
             </section>
           <nav class="prev-next-buttons">
             <div></div>
-            <a class="local-button active" href="Introduction/#Intro" rel="next" title="1. Introduction"><span class="where">1. Introduction</span><span class="arrow">→</span></a></nav>
+            <a class="local-button active" href="Introduction/#Intro" rel="next" title="1. 引言"><span class="where">1. 引言</span><span class="arrow">→</span></a></nav>
           </div>
         </main></div>
     </body>

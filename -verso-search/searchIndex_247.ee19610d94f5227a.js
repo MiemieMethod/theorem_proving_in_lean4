@@ -1,0 +1,1 @@
+window.docContents[247].resolve({"/Propositions-and-Proofs/#propositions-and-proofs-exercises":{"contents":"证明下列恒等式，将 sorry\n 占位符替换为实际证明。\n\n\n\n证明下列恒等式，将 sorry\n 占位符替换为实际证明。这些需要经典推理。\n\n\n\n不用经典逻辑证明 ¬(p ↔ ¬p)\n。\n\n\n","context":"Lean 4 定理证明\u0009命题与证明","header":"3.7. 练习","id":"/Propositions-and-Proofs/#propositions-and-proofs-exercises"}});

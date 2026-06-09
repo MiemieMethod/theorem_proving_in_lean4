@@ -1,0 +1,1 @@
+window.docContents[253].resolve({"/Dependent-Type-Theory/#dependent-type-theory":{"contents":"依赖类型论是一种强大而富有表现力的语言，使你能够表达复杂的数学断言，\n编写复杂的硬件与软件规约，并以自然且统一的方式对二者进行推理。\nLean 基于依赖类型论的一个版本，即构造演算，并带有可数的、\n非累积宇宙层级以及归纳类型。到本章结束时，你将理解这些说法的大部分含义。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n","context":"Lean 4 定理证明","header":"2. 依赖类型论","id":"/Dependent-Type-Theory/#dependent-type-theory"}});

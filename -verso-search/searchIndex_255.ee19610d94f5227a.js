@@ -1,0 +1,1 @@
+window.docContents[255].resolve({"/Propositions-and-Proofs/#propositions-and-proofs":{"contents":"到目前为止，你已经见过一些在 Lean 中定义对象和函数的方法。在本章中，我们还将开始说明如何用依赖类型论的语言书写数学断言和证明。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n","context":"Lean 4 定理证明","header":"3. 命题与证明","id":"/Propositions-and-Proofs/#propositions-and-proofs"}});

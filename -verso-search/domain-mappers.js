@@ -13,7 +13,23 @@ const Verso_DOT_Genre_DOT_Manual_DOT_doc_DOT_suggestion = {
             ref: value[0].data.suggestedRedirect,
           })),
     className: "suggestion-domain",
-    displayName: "Suggestion"
+    displayName: "Suggestion",
+    customRender:
+      (searchable, matchedParts, document) => {
+          const searchTerm = document.createElement('p');
+          for (const { t, v } of matchedParts) {
+            if (t === 'text') {
+              searchTerm.append(v);
+            } else {
+              const emEl = document.createElement('em');
+              searchTerm.append(emEl);
+              emEl.textContent = v;
+            }
+          }
+          searchTerm.append(document.createElement('br'));
+          searchTerm.append(`↪ ${searchable.ref}`);
+          return searchTerm
+        },
     };
 
 /**
@@ -29,7 +45,7 @@ const Verso_DOT_Genre_DOT_Manual_DOT_doc = {
           ref: value,
         })),
     className: "doc-domain",
-    displayName: "Documentation"
+    displayName: "Documentation",
     };
 
 /**
@@ -45,7 +61,7 @@ const Verso_DOT_Genre_DOT_Manual_DOT_doc_DOT_option = {
           ref: value,
         })),
     className: "doc-option-domain",
-    displayName: "Compiler Option"
+    displayName: "Compiler Option",
     };
 
 /**
@@ -61,7 +77,7 @@ const Verso_DOT_Genre_DOT_Manual_DOT_doc_DOT_tech = {
           ref: value,
         })),
     className: "tech-term-domain",
-    displayName: "Terminology"
+    displayName: "Terminology",
     };
 
 /**
@@ -77,7 +93,7 @@ const Verso_DOT_Genre_DOT_Manual_DOT_doc_DOT_tactic_DOT_conv = {
           ref: value,
         })),
     className: "conv-tactic-domain",
-    displayName: "Conv Tactic"
+    displayName: "Conv Tactic",
     };
 
 /**
@@ -115,7 +131,7 @@ const Verso_DOT_Genre_DOT_Manual_DOT_example = {
         });
       },
     className: "example-def",
-    displayName: "Example Definition"
+    displayName: "Example Definition",
     };
 
 /**
@@ -125,13 +141,14 @@ const Verso_DOT_Genre_DOT_Manual_DOT_section = {
     dataToSearchables:
       (domainData) =>
           Object.entries(domainData.contents).map(([key, value]) => ({
-            searchKey: `${value[0].data.sectionNum} ${value[0].data.title}`,
+            searchKey: `${value[0].data.sectionNum ?? ''} ${value[0].data.title}`,
             address: `${value[0].address}#${value[0].id}`,
             domainId: 'Verso.Genre.Manual.section',
             ref: value,
+            priority: value[0].data.searchPriority ?? 50,
           })),
     className: "section-domain",
-    displayName: "Section"
+    displayName: "Section",
     };
 
 /**
@@ -147,7 +164,7 @@ const Verso_DOT_Genre_DOT_Manual_DOT_doc_DOT_tactic = {
           ref: value,
         })),
     className: "tactic-domain",
-    displayName: "Tactic"
+    displayName: "Tactic",
     };
 
 export const domainMappers = {"Verso.Genre.Manual.doc.suggestion":
@@ -166,3 +183,9 @@ export const domainMappers = {"Verso.Genre.Manual.doc.suggestion":
   "Verso.Genre.Manual.doc.tactic":
     Verso_DOT_Genre_DOT_Manual_DOT_doc_DOT_tactic
 };
+
+export const searchPriorities = {
+  semantic: 50,
+    fullText: 50,
+    domains: { }
+  };

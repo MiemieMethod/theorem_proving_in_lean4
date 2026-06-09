@@ -1,0 +1,1 @@
+window.docContents[141].resolve({"/Quantifiers-and-Equality/#quantifiers-and-equality":{"contents":"\n\n上一章介绍了构造涉及命题联结词的陈述之证明的方法。本章将把逻辑构造的工具箱扩展到全称量词、存在量词以及等式关系。\n\n\n\n\n\n\n\n\n\n\n\n\n\n","context":"Lean 4 定理证明","header":"4. 量词与等式","id":"/Quantifiers-and-Equality/#quantifiers-and-equality"}});

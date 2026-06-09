@@ -1,0 +1,1 @@
+window.docContents[174].resolve({"/Structures-and-Records/#inheritance":{"contents":"我们可以通过添加新字段来 扩展 既有结构。这个特性使我们能够模拟一种 继承 形式。\n\n\n\n在下一个例子中，我们使用多重继承定义一个结构，然后利用父结构的对象来定义一个对象。\n\n\n\n","context":"Lean 4 定理证明\u0009结构与记录","header":"9.3. 继承","id":"/Structures-and-Records/#inheritance"}});
