@@ -1065,7 +1065,7 @@ window.onload = () => {
             <div class="split-toc book">
               <div class="title">
                 <label for="--verso-manual-toc-----bookRoot" class="toggle-split-toc"><input type="checkbox" class="toggle-split-toc" id="--verso-manual-toc-----bookRoot" checked="checked"></label><span class="">Table of Contents</span></div>
-              <table><tr class="current numbered"><td class="num">1.</td><td><a href="Introduction/#Intro">引言</a></td></tr><tr class="numbered"><td class="num">2.</td><td><a href="Dependent-Type-Theory/#dependent-type-theory">依赖类型论</a></td></tr><tr class="numbered"><td class="num">3.</td><td><a href="Propositions-and-Proofs/#propositions-and-proofs">命题与证明</a></td></tr><tr class="numbered"><td class="num">4.</td><td><a href="Quantifiers-and-Equality/#quantifiers-and-equality">量词与等式</a></td></tr><tr class="numbered"><td class="num">5.</td><td><a href="Tactics/#tactics">策略</a></td></tr><tr class="numbered"><td class="num">6.</td><td><a href="Interacting-with-Lean/#interacting-with-lean">与 Lean 交互</a></td></tr><tr class="numbered"><td class="num">7.</td><td><a href="Inductive-Types/#inductive-types">归纳类型</a></td></tr><tr class="numbered"><td class="num">8.</td><td><a href="Induction-and-Recursion/#induction-and-recursion">归纳与递归</a></td></tr><tr class="numbered"><td class="num">9.</td><td><a href="Structures-and-Records/#structures-and-records">结构与记录</a></td></tr><tr class="numbered"><td class="num">10.</td><td><a href="Type-Classes/#type-classes">类型类</a></td></tr><tr class="numbered"><td class="num">11.</td><td><a href="The-Conversion-Tactic-Mode/#conv">转换策略模式</a></td></tr><tr class="numbered"><td class="num">12.</td><td><a href="Axioms-and-Computation/#axioms-and-computation">公理与计算</a></td></tr></table></div>
+              <table><tr class="current numbered"><td class="num">1.</td><td><a href="Introduction/#Intro">引言</a></td></tr><tr class="numbered"><td class="num">2.</td><td><a href="Dependent-Type-Theory/#dependent-type-theory">依值类型论</a></td></tr><tr class="numbered"><td class="num">3.</td><td><a href="Propositions-and-Proofs/#propositions-and-proofs">命题与证明</a></td></tr><tr class="numbered"><td class="num">4.</td><td><a href="Quantifiers-and-Equality/#quantifiers-and-equality">量词与等式</a></td></tr><tr class="numbered"><td class="num">5.</td><td><a href="Tactics/#tactics">策略</a></td></tr><tr class="numbered"><td class="num">6.</td><td><a href="Interacting-with-Lean/#interacting-with-lean">与 Lean 交互</a></td></tr><tr class="numbered"><td class="num">7.</td><td><a href="Inductive-Types/#inductive-types">归纳类型</a></td></tr><tr class="numbered"><td class="num">8.</td><td><a href="Induction-and-Recursion/#induction-and-recursion">归纳与递归</a></td></tr><tr class="numbered"><td class="num">9.</td><td><a href="Structures-and-Records/#structures-and-records">结构与记录</a></td></tr><tr class="numbered"><td class="num">10.</td><td><a href="Type-Classes/#type-classes">类型类</a></td></tr><tr class="numbered"><td class="num">11.</td><td><a href="The-Conversion-Tactic-Mode/#conv">转换策略模式</a></td></tr><tr class="numbered"><td class="num">12.</td><td><a href="Axioms-and-Computation/#axioms-and-computation">公理与计算</a></td></tr></table></div>
             <div class="split-toc">
               <div class="title">
                 <label for="--verso-manual-toc-Intro" class="toggle-split-toc"><input type="checkbox" class="toggle-split-toc" id="--verso-manual-toc-Intro" checked="checked"></label><span class="number">1.</span> <span class="current"><a href="Introduction/#Intro">引言</a></span></div>
@@ -1084,7 +1084,7 @@ window.onload = () => {
       <div class="toc-resize-handle"></div>
       <main><div class="content-wrapper">
           <nav class="prev-next-buttons">
-            <a class="local-button active" href="#" rel="prev" title=" Lean 4 定理证明"><span class="arrow">←</span><span class="where"> Lean 4 定理证明</span></a><a class="local-button active" href="Dependent-Type-Theory/#dependent-type-theory" rel="next" title="2. 依赖类型论"><span class="where">2. 依赖类型论</span><span class="arrow">→</span></a></nav>
+            <a class="local-button active" href="#" rel="prev" title=" Lean 4 定理证明"><span class="arrow">←</span><span class="where"> Lean 4 定理证明</span></a><a class="local-button active" href="Dependent-Type-Theory/#dependent-type-theory" rel="next" title="2. 依值类型论"><span class="where">2. 依值类型论</span><span class="arrow">→</span></a></nav>
           <section>
             <h1>
               1. 引言<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=Intro" title="Permalink">🔗</a></span></h1>
@@ -1136,10 +1136,10 @@ Lean 的这些方面在免费在线书籍 <a href="https://lean-lang.org/functio
                 1.3. 关于本书<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=about-this-book" title="Permalink">🔗</a></span></h2>
               <p>
                 本书旨在教你在 Lean 中发展并验证证明。为此所需的许多背景知识其实并不专属于 Lean。首先，你将学习 Lean 所基于的逻辑系统：
-一种 <em>依赖类型论</em> 的版本；它强大到足以证明几乎任何传统数学定理，也具有足够的表达力，能以自然的方式完成这些证明。更具体地说，
-Lean 基于一种被称为带归纳类型的构造演算的系统。Lean 不仅能够在依赖类型论中定义数学对象、表达数学断言，还可以作为书写证明的语言使用。</p>
+一种 <em>依值类型论</em> 的版本；它强大到足以证明几乎任何传统数学定理，也具有足够的表达力，能以自然的方式完成这些证明。更具体地说，
+Lean 基于一种被称为带归纳类型的构造演算的系统。Lean 不仅能够在依值类型论中定义数学对象、表达数学断言，还可以作为书写证明的语言使用。</p>
               <p>
-                由于完全详细的公理化证明极其复杂，定理证明的挑战在于让计算机尽可能填补更多细节。你将在 <a href="Dependent-Type-Theory/#dependent-type-theory">依赖类型论</a>
+                由于完全详细的公理化证明极其复杂，定理证明的挑战在于让计算机尽可能填补更多细节。你将在 <a href="Dependent-Type-Theory/#dependent-type-theory">依值类型论</a>
 中学习支持这一目标的多种方法。例如，项重写，以及 Lean 自动简化项和表达式的自动化方法。同样，你也会学习 <em>细化</em> 与 <em>类型推断</em> 的方法；
 它们可用于支持灵活形式的代数推理。</p>
               <p>
@@ -1175,7 +1175,7 @@ Sebastian Ullrich、Floris van Doorn、Daniel Velleman、Théo Zimmerman、Paul 
               </section>
             </section>
           <nav class="prev-next-buttons">
-            <a class="local-button active" href="#" rel="prev" title=" Lean 4 定理证明"><span class="arrow">←</span><span class="where"> Lean 4 定理证明</span></a><a class="local-button active" href="Dependent-Type-Theory/#dependent-type-theory" rel="next" title="2. 依赖类型论"><span class="where">2. 依赖类型论</span><span class="arrow">→</span></a></nav>
+            <a class="local-button active" href="#" rel="prev" title=" Lean 4 定理证明"><span class="arrow">←</span><span class="where"> Lean 4 定理证明</span></a><a class="local-button active" href="Dependent-Type-Theory/#dependent-type-theory" rel="next" title="2. 依值类型论"><span class="where">2. 依值类型论</span><span class="arrow">→</span></a></nav>
           </div>
         </main></div>
     </body>

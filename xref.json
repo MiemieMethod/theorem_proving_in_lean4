@@ -29,14 +29,14 @@
    "what-makes-dependent-type-theory-dependent":
    [{"id": "what-makes-dependent-type-theory-dependent",
      "data":
-     {"title": "依赖类型论为何“依赖”？",
+     {"title": "依值类型论为何“依值”？",
       "shortTitle": null,
       "sectionNum": "2.8.",
       "searchPriority": 50,
       "context":
       [{"title": "Lean 4 定理证明", "shortTitle": null, "number": null},
-       {"title": "依赖类型论", "shortTitle": null, "number": "2"},
-       {"title": "依赖类型论为何“依赖”？", "shortTitle": null, "number": "8"}]},
+       {"title": "依值类型论", "shortTitle": null, "number": "2"},
+       {"title": "依值类型论为何“依值”？", "shortTitle": null, "number": "8"}]},
      "address": "/Dependent-Type-Theory/"}],
    "well-founded-recursion-and-induction":
    [{"id": "well-founded-recursion-and-induction",
@@ -59,7 +59,7 @@
       "searchPriority": 50,
       "context":
       [{"title": "Lean 4 定理证明", "shortTitle": null, "number": null},
-       {"title": "依赖类型论", "shortTitle": null, "number": "2"},
+       {"title": "依值类型论", "shortTitle": null, "number": "2"},
        {"title": "变量与段落", "shortTitle": null, "number": "6"}]},
      "address": "/Dependent-Type-Theory/"}],
    "using-the-simplifier":
@@ -95,7 +95,7 @@
       "searchPriority": 50,
       "context":
       [{"title": "Lean 4 定理证明", "shortTitle": null, "number": null},
-       {"title": "依赖类型论", "shortTitle": null, "number": "2"},
+       {"title": "依值类型论", "shortTitle": null, "number": "2"},
        {"title": "作为对象的类型", "shortTitle": null, "number": "2"}]},
      "address": "/Dependent-Type-Theory/"}],
    "type-classes":
@@ -282,7 +282,7 @@
       "searchPriority": 50,
       "context":
       [{"title": "Lean 4 定理证明", "shortTitle": null, "number": null},
-       {"title": "依赖类型论", "shortTitle": null, "number": "2"},
+       {"title": "依值类型论", "shortTitle": null, "number": "2"},
        {"title": "简单类型论", "shortTitle": null, "number": "1"}]},
      "address": "/Dependent-Type-Theory/"}],
    "setting-options":
@@ -546,7 +546,7 @@
       "searchPriority": 50,
       "context":
       [{"title": "Lean 4 定理证明", "shortTitle": null, "number": null},
-       {"title": "依赖类型论", "shortTitle": null, "number": "2"},
+       {"title": "依值类型论", "shortTitle": null, "number": "2"},
        {"title": "命名空间", "shortTitle": null, "number": "7"}]},
      "address": "/Dependent-Type-Theory/"}],
    "named-arguments":
@@ -727,7 +727,7 @@
       "searchPriority": 50,
       "context":
       [{"title": "Lean 4 定理证明", "shortTitle": null, "number": null},
-       {"title": "依赖类型论", "shortTitle": null, "number": "2"},
+       {"title": "依值类型论", "shortTitle": null, "number": "2"},
        {"title": "局部定义", "shortTitle": null, "number": "5"}]},
      "address": "/Dependent-Type-Theory/"}],
    "introducing-auxiliary-subgoals":
@@ -880,7 +880,7 @@
       "searchPriority": 50,
       "context":
       [{"title": "Lean 4 定理证明", "shortTitle": null, "number": null},
-       {"title": "依赖类型论", "shortTitle": null, "number": "2"},
+       {"title": "依值类型论", "shortTitle": null, "number": "2"},
        {"title": "隐式参数", "shortTitle": null, "number": "9"}]},
      "address": "/Dependent-Type-Theory/"}],
    "historical-and-philosophical-context":
@@ -928,7 +928,7 @@
       "searchPriority": 50,
       "context":
       [{"title": "Lean 4 定理证明", "shortTitle": null, "number": null},
-       {"title": "依赖类型论", "shortTitle": null, "number": "2"},
+       {"title": "依值类型论", "shortTitle": null, "number": "2"},
        {"title": "函数抽象与求值", "shortTitle": null, "number": "3"}]},
      "address": "/Dependent-Type-Theory/"}],
    "extensible-tactics":
@@ -1019,25 +1019,25 @@
    "dependent-type-theory":
    [{"id": "dependent-type-theory",
      "data":
-     {"title": "依赖类型论",
+     {"title": "依值类型论",
       "shortTitle": null,
       "sectionNum": "2.",
       "searchPriority": 50,
       "context":
       [{"title": "Lean 4 定理证明", "shortTitle": null, "number": null},
-       {"title": "依赖类型论", "shortTitle": null, "number": "2"}]},
+       {"title": "依值类型论", "shortTitle": null, "number": "2"}]},
      "address": "/Dependent-Type-Theory/"}],
    "dependent-pattern-matching":
    [{"id": "dependent-pattern-matching",
      "data":
-     {"title": "依赖模式匹配",
+     {"title": "依值模式匹配",
       "shortTitle": null,
       "sectionNum": "8.8.",
       "searchPriority": 50,
       "context":
       [{"title": "Lean 4 定理证明", "shortTitle": null, "number": null},
        {"title": "归纳与递归", "shortTitle": null, "number": "8"},
-       {"title": "依赖模式匹配", "shortTitle": null, "number": "8"}]},
+       {"title": "依值模式匹配", "shortTitle": null, "number": "8"}]},
      "address": "/Induction-and-Recursion/"}],
    "definitions":
    [{"id": "definitions",
@@ -1048,7 +1048,7 @@
       "searchPriority": 50,
       "context":
       [{"title": "Lean 4 定理证明", "shortTitle": null, "number": null},
-       {"title": "依赖类型论", "shortTitle": null, "number": "2"},
+       {"title": "依值类型论", "shortTitle": null, "number": "2"},
        {"title": "定义", "shortTitle": null, "number": "4"}]},
      "address": "/Dependent-Type-Theory/"}],
    "defining-the-natural-numbers":
@@ -1357,44 +1357,44 @@
    [{"id": "___-next",
      "data":
      {"/Dependent-Type-Theory/#___-next":
-      {"display": "β", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]},
+      {"display": "β", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]},
       "/Dependent-Type-Theory/#___":
-      {"display": "β", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]}},
+      {"display": "β", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "___",
      "data":
      {"/Dependent-Type-Theory/#___-next":
-      {"display": "β", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]},
+      {"display": "β", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]},
       "/Dependent-Type-Theory/#___":
-      {"display": "β", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]}},
+      {"display": "β", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]}},
      "address": "/Dependent-Type-Theory/"}],
    "α":
    [{"id": "___-next-next",
      "data":
      {"/Dependent-Type-Theory/#___-next-next":
-      {"display": "α", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]},
+      {"display": "α", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]},
       "/Dependent-Type-Theory/#___-next":
-      {"display": "α", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]},
+      {"display": "α", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]},
       "/Dependent-Type-Theory/#___":
-      {"display": "α", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]}},
+      {"display": "α", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "___-next",
      "data":
      {"/Dependent-Type-Theory/#___-next-next":
-      {"display": "α", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]},
+      {"display": "α", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]},
       "/Dependent-Type-Theory/#___-next":
-      {"display": "α", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]},
+      {"display": "α", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]},
       "/Dependent-Type-Theory/#___":
-      {"display": "α", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]}},
+      {"display": "α", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "___",
      "data":
      {"/Dependent-Type-Theory/#___-next-next":
-      {"display": "α", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]},
+      {"display": "α", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]},
       "/Dependent-Type-Theory/#___-next":
-      {"display": "α", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]},
+      {"display": "α", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]},
       "/Dependent-Type-Theory/#___":
-      {"display": "α", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]}},
+      {"display": "α", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]}},
      "address": "/Dependent-Type-Theory/"}],
    "zero_add":
    [{"id": "zero_add",
@@ -1471,7 +1471,7 @@
    [{"id": "twice_double",
      "data":
      {"/Dependent-Type-Theory/#twice_double":
-      {"display": "twice_double", "context": ["Lean 4 定理证明", "依赖类型论", "局部定义"]}},
+      {"display": "twice_double", "context": ["Lean 4 定理证明", "依值类型论", "局部定义"]}},
      "address": "/Dependent-Type-Theory/"}],
    "tteq":
    [{"id": "tteq",
@@ -2025,7 +2025,7 @@
    [{"id": "t",
      "data":
      {"/Dependent-Type-Theory/#t":
-      {"display": "t", "context": ["Lean 4 定理证明", "依赖类型论", "局部定义"]}},
+      {"display": "t", "context": ["Lean 4 定理证明", "依值类型论", "局部定义"]}},
      "address": "/Dependent-Type-Theory/"}],
    "symmetric":
    [{"id": "reflexive",
@@ -2123,7 +2123,7 @@
    [{"id": "square",
      "data":
      {"/Dependent-Type-Theory/#square":
-      {"display": "square", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "square", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Dependent-Type-Theory/"}],
    "simpConst_eq":
    [{"id": "simpConst",
@@ -2411,7 +2411,7 @@
    [{"id": "pi",
      "data":
      {"/Dependent-Type-Theory/#pi":
-      {"display": "pi", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "pi", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Dependent-Type-Theory/"}],
    "p":
    [{"id": "Point-next-next-next-next-next",
@@ -2532,7 +2532,7 @@
    [{"id": "m",
      "data":
      {"/Dependent-Type-Theory/#m":
-      {"display": "n", "context": ["Lean 4 定理证明", "依赖类型论", "简单类型论"]}},
+      {"display": "n", "context": ["Lean 4 定理证明", "依值类型论", "简单类型论"]}},
      "address": "/Dependent-Type-Theory/"}],
    "myTuple":
    [{"id": "Tuple-next",
@@ -2578,7 +2578,7 @@
    [{"id": "m",
      "data":
      {"/Dependent-Type-Theory/#m":
-      {"display": "m", "context": ["Lean 4 定理证明", "依赖类型论", "简单类型论"]}},
+      {"display": "m", "context": ["Lean 4 定理证明", "依值类型论", "简单类型论"]}},
      "address": "/Dependent-Type-Theory/"}],
    "listAdd":
    [{"id": "listAdd",
@@ -2728,16 +2728,16 @@
    [{"id": "ident",
      "data":
      {"/Dependent-Type-Theory/#ident-next":
-      {"display": "ident", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]},
+      {"display": "ident", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]},
       "/Dependent-Type-Theory/#ident":
-      {"display": "ident", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]}},
+      {"display": "ident", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "ident-next",
      "data":
      {"/Dependent-Type-Theory/#ident-next":
-      {"display": "ident", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]},
+      {"display": "ident", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]},
       "/Dependent-Type-Theory/#ident":
-      {"display": "ident", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]}},
+      {"display": "ident", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]}},
      "address": "/Dependent-Type-Theory/"}],
    "i3":
    [{"id": "Foo-next",
@@ -2767,19 +2767,19 @@
    [{"id": "f-next-next",
      "data":
      {"/Dependent-Type-Theory/#f-next-next":
-      {"display": "h2", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]}},
+      {"display": "h2", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]}},
      "address": "/Dependent-Type-Theory/"}],
    "h1":
    [{"id": "f-next-next",
      "data":
      {"/Dependent-Type-Theory/#f-next-next":
-      {"display": "h1", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]}},
+      {"display": "h1", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]}},
      "address": "/Dependent-Type-Theory/"}],
    "greater":
    [{"id": "greater",
      "data":
      {"/Dependent-Type-Theory/#greater":
-      {"display": "greater", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "greater", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Dependent-Type-Theory/"}],
    "goldbach_conjecture":
    [{"id": "even",
@@ -2840,11 +2840,11 @@
       "/Interacting-with-Lean/#f-next-next-next-next-next":
       {"display": "g", "context": ["Lean 4 定理证明", "与 Lean 交互", "命名参数"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
       {"display": "g", "context": ["Lean 4 定理证明", "公理与计算", "函数外延性"]}},
      "address": "/Axioms-and-Computation/"},
@@ -2855,11 +2855,11 @@
       "/Interacting-with-Lean/#f-next-next-next-next-next":
       {"display": "g", "context": ["Lean 4 定理证明", "与 Lean 交互", "命名参数"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
       {"display": "g", "context": ["Lean 4 定理证明", "公理与计算", "函数外延性"]}},
      "address": "/Dependent-Type-Theory/"},
@@ -2870,11 +2870,11 @@
       "/Interacting-with-Lean/#f-next-next-next-next-next":
       {"display": "g", "context": ["Lean 4 定理证明", "与 Lean 交互", "命名参数"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
       {"display": "g", "context": ["Lean 4 定理证明", "公理与计算", "函数外延性"]}},
      "address": "/Dependent-Type-Theory/"},
@@ -2885,11 +2885,11 @@
       "/Interacting-with-Lean/#f-next-next-next-next-next":
       {"display": "g", "context": ["Lean 4 定理证明", "与 Lean 交互", "命名参数"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
       {"display": "g", "context": ["Lean 4 定理证明", "公理与计算", "函数外延性"]}},
      "address": "/Tactics/"},
@@ -2900,11 +2900,11 @@
       "/Interacting-with-Lean/#f-next-next-next-next-next":
       {"display": "g", "context": ["Lean 4 定理证明", "与 Lean 交互", "命名参数"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
       {"display": "g", "context": ["Lean 4 定理证明", "公理与计算", "函数外延性"]}},
      "address": "/Interacting-with-Lean/"},
@@ -2915,11 +2915,11 @@
       "/Interacting-with-Lean/#f-next-next-next-next-next":
       {"display": "g", "context": ["Lean 4 定理证明", "与 Lean 交互", "命名参数"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "g", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "g", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
       {"display": "g", "context": ["Lean 4 定理证明", "公理与计算", "函数外延性"]}},
      "address": "/Dependent-Type-Theory/"}],
@@ -2961,7 +2961,7 @@
       "/Induction-and-Recursion/#foo-next-next":
       {"display": "foo", "context": ["Lean 4 定理证明", "归纳与递归", "模式匹配"]},
       "/Dependent-Type-Theory/#foo":
-      {"display": "foo", "context": ["Lean 4 定理证明", "依赖类型论", "局部定义"]}},
+      {"display": "foo", "context": ["Lean 4 定理证明", "依值类型论", "局部定义"]}},
      "address": "/Type-Classes/"},
     {"id": "foo-next-next-next-next-next-next-next",
      "data":
@@ -2988,7 +2988,7 @@
       "/Induction-and-Recursion/#foo-next-next":
       {"display": "foo", "context": ["Lean 4 定理证明", "归纳与递归", "模式匹配"]},
       "/Dependent-Type-Theory/#foo":
-      {"display": "foo", "context": ["Lean 4 定理证明", "依赖类型论", "局部定义"]}},
+      {"display": "foo", "context": ["Lean 4 定理证明", "依值类型论", "局部定义"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "swap",
      "data":
@@ -3015,7 +3015,7 @@
       "/Induction-and-Recursion/#foo-next-next":
       {"display": "foo", "context": ["Lean 4 定理证明", "归纳与递归", "模式匹配"]},
       "/Dependent-Type-Theory/#foo":
-      {"display": "foo", "context": ["Lean 4 定理证明", "依赖类型论", "局部定义"]}},
+      {"display": "foo", "context": ["Lean 4 定理证明", "依值类型论", "局部定义"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "foo-next-next",
      "data":
@@ -3042,7 +3042,7 @@
       "/Induction-and-Recursion/#foo-next-next":
       {"display": "foo", "context": ["Lean 4 定理证明", "归纳与递归", "模式匹配"]},
       "/Dependent-Type-Theory/#foo":
-      {"display": "foo", "context": ["Lean 4 定理证明", "依赖类型论", "局部定义"]}},
+      {"display": "foo", "context": ["Lean 4 定理证明", "依值类型论", "局部定义"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "foo-next-next-next-next",
      "data":
@@ -3069,7 +3069,7 @@
       "/Induction-and-Recursion/#foo-next-next":
       {"display": "foo", "context": ["Lean 4 定理证明", "归纳与递归", "模式匹配"]},
       "/Dependent-Type-Theory/#foo":
-      {"display": "foo", "context": ["Lean 4 定理证明", "依赖类型论", "局部定义"]}},
+      {"display": "foo", "context": ["Lean 4 定理证明", "依值类型论", "局部定义"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "foo-next-next-next",
      "data":
@@ -3096,7 +3096,7 @@
       "/Induction-and-Recursion/#foo-next-next":
       {"display": "foo", "context": ["Lean 4 定理证明", "归纳与递归", "模式匹配"]},
       "/Dependent-Type-Theory/#foo":
-      {"display": "foo", "context": ["Lean 4 定理证明", "依赖类型论", "局部定义"]}},
+      {"display": "foo", "context": ["Lean 4 定理证明", "依值类型论", "局部定义"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "foo-next-next-next-next-next-next-next-next",
      "data":
@@ -3123,7 +3123,7 @@
       "/Induction-and-Recursion/#foo-next-next":
       {"display": "foo", "context": ["Lean 4 定理证明", "归纳与递归", "模式匹配"]},
       "/Dependent-Type-Theory/#foo":
-      {"display": "foo", "context": ["Lean 4 定理证明", "依赖类型论", "局部定义"]}},
+      {"display": "foo", "context": ["Lean 4 定理证明", "依值类型论", "局部定义"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "foo-next-next-next-next-next-next",
      "data":
@@ -3150,7 +3150,7 @@
       "/Induction-and-Recursion/#foo-next-next":
       {"display": "foo", "context": ["Lean 4 定理证明", "归纳与递归", "模式匹配"]},
       "/Dependent-Type-Theory/#foo":
-      {"display": "foo", "context": ["Lean 4 定理证明", "依赖类型论", "局部定义"]}},
+      {"display": "foo", "context": ["Lean 4 定理证明", "依值类型论", "局部定义"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "foo",
      "data":
@@ -3177,7 +3177,7 @@
       "/Induction-and-Recursion/#foo-next-next":
       {"display": "foo", "context": ["Lean 4 定理证明", "归纳与递归", "模式匹配"]},
       "/Dependent-Type-Theory/#foo":
-      {"display": "foo", "context": ["Lean 4 定理证明", "依赖类型论", "局部定义"]}},
+      {"display": "foo", "context": ["Lean 4 定理证明", "依值类型论", "局部定义"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "foo-next-next-next-next-next-next-next-next-next-next",
      "data":
@@ -3204,7 +3204,7 @@
       "/Induction-and-Recursion/#foo-next-next":
       {"display": "foo", "context": ["Lean 4 定理证明", "归纳与递归", "模式匹配"]},
       "/Dependent-Type-Theory/#foo":
-      {"display": "foo", "context": ["Lean 4 定理证明", "依赖类型论", "局部定义"]}},
+      {"display": "foo", "context": ["Lean 4 定理证明", "依值类型论", "局部定义"]}},
      "address": "/Type-Classes/"},
     {"id": "foo-next",
      "data":
@@ -3231,7 +3231,7 @@
       "/Induction-and-Recursion/#foo-next-next":
       {"display": "foo", "context": ["Lean 4 定理证明", "归纳与递归", "模式匹配"]},
       "/Dependent-Type-Theory/#foo":
-      {"display": "foo", "context": ["Lean 4 定理证明", "依赖类型论", "局部定义"]}},
+      {"display": "foo", "context": ["Lean 4 定理证明", "依值类型论", "局部定义"]}},
      "address": "/Interacting-with-Lean/"},
     {"id": "foo-next-next-next-next-next",
      "data":
@@ -3258,7 +3258,7 @@
       "/Induction-and-Recursion/#foo-next-next":
       {"display": "foo", "context": ["Lean 4 定理证明", "归纳与递归", "模式匹配"]},
       "/Dependent-Type-Theory/#foo":
-      {"display": "foo", "context": ["Lean 4 定理证明", "依赖类型论", "局部定义"]}},
+      {"display": "foo", "context": ["Lean 4 定理证明", "依值类型论", "局部定义"]}},
      "address": "/Induction-and-Recursion/"}],
    "filter":
    [{"id": "isNotZero-next",
@@ -3372,11 +3372,11 @@
       "/Induction-and-Recursion/#f-next-next-next-next-next-next-next":
       {"display": "f", "context": ["Lean 4 定理证明", "归纳与递归", "良基递归与归纳"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#mod7Rel":
       {"display": "f", "context": ["Lean 4 定理证明", "公理与计算", "商"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
@@ -3403,11 +3403,11 @@
       "/Induction-and-Recursion/#f-next-next-next-next-next-next-next":
       {"display": "f", "context": ["Lean 4 定理证明", "归纳与递归", "良基递归与归纳"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#mod7Rel":
       {"display": "f", "context": ["Lean 4 定理证明", "公理与计算", "商"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
@@ -3434,11 +3434,11 @@
       "/Induction-and-Recursion/#f-next-next-next-next-next-next-next":
       {"display": "f", "context": ["Lean 4 定理证明", "归纳与递归", "良基递归与归纳"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#mod7Rel":
       {"display": "f", "context": ["Lean 4 定理证明", "公理与计算", "商"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
@@ -3465,11 +3465,11 @@
       "/Induction-and-Recursion/#f-next-next-next-next-next-next-next":
       {"display": "f", "context": ["Lean 4 定理证明", "归纳与递归", "良基递归与归纳"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#mod7Rel":
       {"display": "f", "context": ["Lean 4 定理证明", "公理与计算", "商"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
@@ -3496,11 +3496,11 @@
       "/Induction-and-Recursion/#f-next-next-next-next-next-next-next":
       {"display": "f", "context": ["Lean 4 定理证明", "归纳与递归", "良基递归与归纳"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#mod7Rel":
       {"display": "f", "context": ["Lean 4 定理证明", "公理与计算", "商"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
@@ -3527,11 +3527,11 @@
       "/Induction-and-Recursion/#f-next-next-next-next-next-next-next":
       {"display": "f", "context": ["Lean 4 定理证明", "归纳与递归", "良基递归与归纳"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#mod7Rel":
       {"display": "f", "context": ["Lean 4 定理证明", "公理与计算", "商"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
@@ -3558,11 +3558,11 @@
       "/Induction-and-Recursion/#f-next-next-next-next-next-next-next":
       {"display": "f", "context": ["Lean 4 定理证明", "归纳与递归", "良基递归与归纳"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#mod7Rel":
       {"display": "f", "context": ["Lean 4 定理证明", "公理与计算", "商"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
@@ -3589,11 +3589,11 @@
       "/Induction-and-Recursion/#f-next-next-next-next-next-next-next":
       {"display": "f", "context": ["Lean 4 定理证明", "归纳与递归", "良基递归与归纳"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#mod7Rel":
       {"display": "f", "context": ["Lean 4 定理证明", "公理与计算", "商"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
@@ -3620,11 +3620,11 @@
       "/Induction-and-Recursion/#f-next-next-next-next-next-next-next":
       {"display": "f", "context": ["Lean 4 定理证明", "归纳与递归", "良基递归与归纳"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#mod7Rel":
       {"display": "f", "context": ["Lean 4 定理证明", "公理与计算", "商"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
@@ -3651,11 +3651,11 @@
       "/Induction-and-Recursion/#f-next-next-next-next-next-next-next":
       {"display": "f", "context": ["Lean 4 定理证明", "归纳与递归", "良基递归与归纳"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#mod7Rel":
       {"display": "f", "context": ["Lean 4 定理证明", "公理与计算", "商"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
@@ -3682,11 +3682,11 @@
       "/Induction-and-Recursion/#f-next-next-next-next-next-next-next":
       {"display": "f", "context": ["Lean 4 定理证明", "归纳与递归", "良基递归与归纳"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#mod7Rel":
       {"display": "f", "context": ["Lean 4 定理证明", "公理与计算", "商"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
@@ -3713,11 +3713,11 @@
       "/Induction-and-Recursion/#f-next-next-next-next-next-next-next":
       {"display": "f", "context": ["Lean 4 定理证明", "归纳与递归", "良基递归与归纳"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#mod7Rel":
       {"display": "f", "context": ["Lean 4 定理证明", "公理与计算", "商"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
@@ -3744,11 +3744,11 @@
       "/Induction-and-Recursion/#f-next-next-next-next-next-next-next":
       {"display": "f", "context": ["Lean 4 定理证明", "归纳与递归", "良基递归与归纳"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#mod7Rel":
       {"display": "f", "context": ["Lean 4 定理证明", "公理与计算", "商"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
@@ -3775,11 +3775,11 @@
       "/Induction-and-Recursion/#f-next-next-next-next-next-next-next":
       {"display": "f", "context": ["Lean 4 定理证明", "归纳与递归", "良基递归与归纳"]},
       "/Dependent-Type-Theory/#f-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]},
       "/Dependent-Type-Theory/#f-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Dependent-Type-Theory/#f":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "函数抽象与求值"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "函数抽象与求值"]},
       "/Axioms-and-Computation/#mod7Rel":
       {"display": "f", "context": ["Lean 4 定理证明", "公理与计算", "商"]},
       "/Axioms-and-Computation/#f-next-next-next-next-next-next-next-next-next-next":
@@ -3878,11 +3878,11 @@
       {"display": "double",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "关于节的更多说明"]},
       "/Dependent-Type-Theory/#double-next-next":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#double-next":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#double":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "double-next-next",
      "data":
@@ -3894,11 +3894,11 @@
       {"display": "double",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "关于节的更多说明"]},
       "/Dependent-Type-Theory/#double-next-next":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#double-next":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#double":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "double",
      "data":
@@ -3910,11 +3910,11 @@
       {"display": "double",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "关于节的更多说明"]},
       "/Dependent-Type-Theory/#double-next-next":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#double-next":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#double":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "double-next-next-next",
      "data":
@@ -3926,11 +3926,11 @@
       {"display": "double",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "关于节的更多说明"]},
       "/Dependent-Type-Theory/#double-next-next":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#double-next":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#double":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Interacting-with-Lean/"},
     {"id": "Point-next-next-next-next-next-next-next",
      "data":
@@ -3942,11 +3942,11 @@
       {"display": "double",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "关于节的更多说明"]},
       "/Dependent-Type-Theory/#double-next-next":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#double-next":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#double":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Type-Classes/"},
     {"id": "Point-next-next-next-next-next-next",
      "data":
@@ -3958,122 +3958,122 @@
       {"display": "double",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "关于节的更多说明"]},
       "/Dependent-Type-Theory/#double-next-next":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#double-next":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#double":
-      {"display": "double", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "double", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Type-Classes/"}],
    "doTwice":
    [{"id": "compose-next-next-next-next",
      "data":
      {"/Dependent-Type-Theory/#doTwice":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]}},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "compose-next-next",
      "data":
      {"/Dependent-Type-Theory/#doTwice":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]}},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "compose-next-next-next",
      "data":
      {"/Dependent-Type-Theory/#doTwice":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]}},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "doTwice",
      "data":
      {"/Dependent-Type-Theory/#doTwice":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]}},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "compose-next",
      "data":
      {"/Dependent-Type-Theory/#doTwice":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "doTwice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]}},
+      {"display": "doTwice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]}},
      "address": "/Dependent-Type-Theory/"}],
    "doThrice":
    [{"id": "compose-next-next-next-next",
      "data":
      {"/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]}},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "compose-next-next",
      "data":
      {"/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]}},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "compose-next-next-next",
      "data":
      {"/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]}},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "compose-next",
      "data":
      {"/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "doThrice", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]}},
+      {"display": "doThrice", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]}},
      "address": "/Dependent-Type-Theory/"}],
    "dne":
    [{"id": "dne",
@@ -4153,7 +4153,7 @@
    [{"id": "cons",
      "data":
      {"/Dependent-Type-Theory/#cons":
-      {"display": "cons", "context": ["Lean 4 定理证明", "依赖类型论", "依赖类型论为何“依赖”？"]}},
+      {"display": "cons", "context": ["Lean 4 定理证明", "依值类型论", "依值类型论为何“依值”？"]}},
      "address": "/Dependent-Type-Theory/"}],
    "compose":
    [{"id": "compose-next-next-next-next-next",
@@ -4171,15 +4171,15 @@
       {"display": "compose",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "自动绑定的隐式参数"]},
       "/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Interacting-with-Lean/"},
     {"id": "compose-next-next-next-next-next-next",
      "data":
@@ -4196,15 +4196,15 @@
       {"display": "compose",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "自动绑定的隐式参数"]},
       "/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Interacting-with-Lean/"},
     {"id": "compose-next-next-next-next",
      "data":
@@ -4221,15 +4221,15 @@
       {"display": "compose",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "自动绑定的隐式参数"]},
       "/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "compose-next-next",
      "data":
@@ -4246,15 +4246,15 @@
       {"display": "compose",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "自动绑定的隐式参数"]},
       "/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "compose-next-next-next-next-next-next-next",
      "data":
@@ -4271,15 +4271,15 @@
       {"display": "compose",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "自动绑定的隐式参数"]},
       "/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Interacting-with-Lean/"},
     {"id": "compose-next-next-next",
      "data":
@@ -4296,15 +4296,15 @@
       {"display": "compose",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "自动绑定的隐式参数"]},
       "/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "compose-next-next-next-next-next-next-next-next",
      "data":
@@ -4321,15 +4321,15 @@
       {"display": "compose",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "自动绑定的隐式参数"]},
       "/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Interacting-with-Lean/"},
     {"id": "compose-next",
      "data":
@@ -4346,15 +4346,15 @@
       {"display": "compose",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "自动绑定的隐式参数"]},
       "/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "compose",
      "data":
@@ -4371,43 +4371,43 @@
       {"display": "compose",
        "context": ["Lean 4 定理证明", "与 Lean 交互", "自动绑定的隐式参数"]},
       "/Dependent-Type-Theory/#compose-next-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose-next":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "变量与段落"]},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "变量与段落"]},
       "/Dependent-Type-Theory/#compose":
-      {"display": "compose", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "compose", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Dependent-Type-Theory/"}],
    "bs":
    [{"id": "Lst",
      "data":
      {"/Dependent-Type-Theory/#as-next":
-      {"display": "bs", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]},
+      {"display": "bs", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]},
       "/Dependent-Type-Theory/#as":
-      {"display": "bs", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]},
+      {"display": "bs", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]},
       "/Dependent-Type-Theory/#Lst":
-      {"display": "bs", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]}},
+      {"display": "bs", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "as",
      "data":
      {"/Dependent-Type-Theory/#as-next":
-      {"display": "bs", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]},
+      {"display": "bs", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]},
       "/Dependent-Type-Theory/#as":
-      {"display": "bs", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]},
+      {"display": "bs", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]},
       "/Dependent-Type-Theory/#Lst":
-      {"display": "bs", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]}},
+      {"display": "bs", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "as-next",
      "data":
      {"/Dependent-Type-Theory/#as-next":
-      {"display": "bs", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]},
+      {"display": "bs", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]},
       "/Dependent-Type-Theory/#as":
-      {"display": "bs", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]},
+      {"display": "bs", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]},
       "/Dependent-Type-Theory/#Lst":
-      {"display": "bs", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]}},
+      {"display": "bs", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]}},
      "address": "/Dependent-Type-Theory/"}],
    "bar₄":
    [{"id": "bar___",
@@ -4482,41 +4482,41 @@
    [{"id": "m",
      "data":
      {"/Dependent-Type-Theory/#m":
-      {"display": "b2", "context": ["Lean 4 定理证明", "依赖类型论", "简单类型论"]}},
+      {"display": "b2", "context": ["Lean 4 定理证明", "依值类型论", "简单类型论"]}},
      "address": "/Dependent-Type-Theory/"}],
    "b1":
    [{"id": "m",
      "data":
      {"/Dependent-Type-Theory/#m":
-      {"display": "b1", "context": ["Lean 4 定理证明", "依赖类型论", "简单类型论"]}},
+      {"display": "b1", "context": ["Lean 4 定理证明", "依值类型论", "简单类型论"]}},
      "address": "/Dependent-Type-Theory/"}],
    "as":
    [{"id": "Lst",
      "data":
      {"/Dependent-Type-Theory/#as-next":
-      {"display": "as", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]},
+      {"display": "as", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]},
       "/Dependent-Type-Theory/#as":
-      {"display": "as", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]},
+      {"display": "as", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]},
       "/Dependent-Type-Theory/#Lst":
-      {"display": "as", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]}},
+      {"display": "as", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "as",
      "data":
      {"/Dependent-Type-Theory/#as-next":
-      {"display": "as", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]},
+      {"display": "as", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]},
       "/Dependent-Type-Theory/#as":
-      {"display": "as", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]},
+      {"display": "as", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]},
       "/Dependent-Type-Theory/#Lst":
-      {"display": "as", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]}},
+      {"display": "as", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "as-next",
      "data":
      {"/Dependent-Type-Theory/#as-next":
-      {"display": "as", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]},
+      {"display": "as", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]},
       "/Dependent-Type-Theory/#as":
-      {"display": "as", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]},
+      {"display": "as", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]},
       "/Dependent-Type-Theory/#Lst":
-      {"display": "as", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]}},
+      {"display": "as", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]}},
      "address": "/Dependent-Type-Theory/"}],
    "append":
    [{"id": "append",
@@ -4600,9 +4600,9 @@
       "/Induction-and-Recursion/#add-next-next":
       {"display": "add", "context": ["Lean 4 定理证明", "归纳与递归", "结构递归与结构归纳"]},
       "/Dependent-Type-Theory/#add-next":
-      {"display": "add", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "add", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#add":
-      {"display": "add", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "add", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "String___add",
      "data":
@@ -4616,9 +4616,9 @@
       "/Induction-and-Recursion/#add-next-next":
       {"display": "add", "context": ["Lean 4 定理证明", "归纳与递归", "结构递归与结构归纳"]},
       "/Dependent-Type-Theory/#add-next":
-      {"display": "add", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "add", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#add":
-      {"display": "add", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "add", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Interacting-with-Lean/"},
     {"id": "add-next-next-next-next",
      "data":
@@ -4632,9 +4632,9 @@
       "/Induction-and-Recursion/#add-next-next":
       {"display": "add", "context": ["Lean 4 定理证明", "归纳与递归", "结构递归与结构归纳"]},
       "/Dependent-Type-Theory/#add-next":
-      {"display": "add", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "add", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#add":
-      {"display": "add", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "add", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "add",
      "data":
@@ -4648,9 +4648,9 @@
       "/Induction-and-Recursion/#add-next-next":
       {"display": "add", "context": ["Lean 4 定理证明", "归纳与递归", "结构递归与结构归纳"]},
       "/Dependent-Type-Theory/#add-next":
-      {"display": "add", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "add", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#add":
-      {"display": "add", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "add", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "add-next-next",
      "data":
@@ -4664,9 +4664,9 @@
       "/Induction-and-Recursion/#add-next-next":
       {"display": "add", "context": ["Lean 4 定理证明", "归纳与递归", "结构递归与结构归纳"]},
       "/Dependent-Type-Theory/#add-next":
-      {"display": "add", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "add", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#add":
-      {"display": "add", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "add", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "add-next",
      "data":
@@ -4680,9 +4680,9 @@
       "/Induction-and-Recursion/#add-next-next":
       {"display": "add", "context": ["Lean 4 定理证明", "归纳与递归", "结构递归与结构归纳"]},
       "/Dependent-Type-Theory/#add-next":
-      {"display": "add", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]},
+      {"display": "add", "context": ["Lean 4 定理证明", "依值类型论", "定义"]},
       "/Dependent-Type-Theory/#add":
-      {"display": "add", "context": ["Lean 4 定理证明", "依赖类型论", "定义"]}},
+      {"display": "add", "context": ["Lean 4 定理证明", "依值类型论", "定义"]}},
      "address": "/Dependent-Type-Theory/"}],
    "ack_gt_zero":
    [{"id": "ack-next-next-next",
@@ -5025,7 +5025,7 @@
    [{"id": "Vect___zipWith",
      "data":
      {"/Induction-and-Recursion/#Vect___zipWith":
-      {"display": "zipWith", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "zipWith", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"}],
    "Vect.zip":
    [{"id": "Vect___head",
@@ -5033,48 +5033,48 @@
      {"/Induction-and-Recursion/#Vect___head-next":
       {"display": "zip", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect___head":
-      {"display": "zip", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "zip", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "Vect___head-next",
      "data":
      {"/Induction-and-Recursion/#Vect___head-next":
       {"display": "zip", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect___head":
-      {"display": "zip", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "zip", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"}],
    "Vect.tailAux":
    [{"id": "Vect___tailAux",
      "data":
      {"/Induction-and-Recursion/#Vect___tailAux":
-      {"display": "tailAux", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "tailAux", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"}],
    "Vect.tail":
    [{"id": "Vect___tailAux",
      "data":
      {"/Induction-and-Recursion/#Vect___tailAux":
-      {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]},
+      {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]},
       "/Induction-and-Recursion/#Vect___head-next":
       {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect___head":
-      {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "Vect___head",
      "data":
      {"/Induction-and-Recursion/#Vect___tailAux":
-      {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]},
+      {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]},
       "/Induction-and-Recursion/#Vect___head-next":
       {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect___head":
-      {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "Vect___head-next",
      "data":
      {"/Induction-and-Recursion/#Vect___tailAux":
-      {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]},
+      {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]},
       "/Induction-and-Recursion/#Vect___head-next":
       {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect___head":
-      {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "tail", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"}],
    "Vect.nil":
    [{"id": "Vect-next-next",
@@ -5084,7 +5084,7 @@
       "/Induction-and-Recursion/#Vect-next-next":
       {"display": "nil", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect-next":
-      {"display": "nil", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "nil", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "Vect-next",
      "data":
@@ -5093,7 +5093,7 @@
       "/Induction-and-Recursion/#Vect-next-next":
       {"display": "nil", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect-next":
-      {"display": "nil", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "nil", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "Vect",
      "data":
@@ -5102,7 +5102,7 @@
       "/Induction-and-Recursion/#Vect-next-next":
       {"display": "nil", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect-next":
-      {"display": "nil", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "nil", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Inductive-Types/"}],
    "Vect.map":
    [{"id": "Vect___head",
@@ -5110,14 +5110,14 @@
      {"/Induction-and-Recursion/#Vect___head-next":
       {"display": "map", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect___head":
-      {"display": "map", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "map", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "Vect___head-next",
      "data":
      {"/Induction-and-Recursion/#Vect___head-next":
       {"display": "map", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect___head":
-      {"display": "map", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "map", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"}],
    "Vect.head":
    [{"id": "Vect___head",
@@ -5125,14 +5125,14 @@
      {"/Induction-and-Recursion/#Vect___head-next":
       {"display": "head", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect___head":
-      {"display": "head", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "head", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "Vect___head-next",
      "data":
      {"/Induction-and-Recursion/#Vect___head-next":
       {"display": "head", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect___head":
-      {"display": "head", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "head", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"}],
    "Vect.eta":
    [{"id": "Vect___head",
@@ -5140,14 +5140,14 @@
      {"/Induction-and-Recursion/#Vect___head-next":
       {"display": "eta", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect___head":
-      {"display": "eta", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "eta", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "Vect___head-next",
      "data":
      {"/Induction-and-Recursion/#Vect___head-next":
       {"display": "eta", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect___head":
-      {"display": "eta", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "eta", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"}],
    "Vect.add":
    [{"id": "Vect___add-next",
@@ -5223,7 +5223,7 @@
       "/Induction-and-Recursion/#Vect-next-next":
       {"display": "Vect", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect-next":
-      {"display": "Vect", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "Vect", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "Vect-next",
      "data":
@@ -5232,7 +5232,7 @@
       "/Induction-and-Recursion/#Vect-next-next":
       {"display": "Vect", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect-next":
-      {"display": "Vect", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "Vect", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Induction-and-Recursion/"},
     {"id": "Vect",
      "data":
@@ -5241,7 +5241,7 @@
       "/Induction-and-Recursion/#Vect-next-next":
       {"display": "Vect", "context": ["Lean 4 定理证明", "归纳与递归", "不可访问模式"]},
       "/Induction-and-Recursion/#Vect-next":
-      {"display": "Vect", "context": ["Lean 4 定理证明", "归纳与递归", "依赖模式匹配"]}},
+      {"display": "Vect", "context": ["Lean 4 定理证明", "归纳与递归", "依值模式匹配"]}},
      "address": "/Inductive-Types/"}],
    "UProd.mk_eq_mk":
    [{"id": "UProd___mk_eq_mk",
@@ -6598,25 +6598,25 @@
    [{"id": "Lst",
      "data":
      {"/Dependent-Type-Theory/#Lst":
-      {"display": "Lst.nil", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]}},
+      {"display": "Lst.nil", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]}},
      "address": "/Dependent-Type-Theory/"}],
    "Lst.cons":
    [{"id": "Lst",
      "data":
      {"/Dependent-Type-Theory/#Lst":
-      {"display": "Lst.cons", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]}},
+      {"display": "Lst.cons", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]}},
      "address": "/Dependent-Type-Theory/"}],
    "Lst.append":
    [{"id": "Lst",
      "data":
      {"/Dependent-Type-Theory/#Lst":
-      {"display": "Lst.append", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]}},
+      {"display": "Lst.append", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]}},
      "address": "/Dependent-Type-Theory/"}],
    "Lst":
    [{"id": "Lst",
      "data":
      {"/Dependent-Type-Theory/#Lst":
-      {"display": "Lst", "context": ["Lean 4 定理证明", "依赖类型论", "隐式参数"]}},
+      {"display": "Lst", "context": ["Lean 4 定理证明", "依值类型论", "隐式参数"]}},
      "address": "/Dependent-Type-Theory/"}],
    "List.toSet":
    [{"id": "List___toSet",
@@ -7443,78 +7443,78 @@
    [{"id": "___",
      "data":
      {"/Dependent-Type-Theory/#___":
-      {"display": "G", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]}},
+      {"display": "G", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]}},
      "address": "/Dependent-Type-Theory/"}],
    "Foo.ffa":
    [{"id": "Foo___a",
      "data":
      {"/Dependent-Type-Theory/#Foo___a-next-next":
-      {"display": "ffa", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "ffa", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a":
-      {"display": "ffa", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]}},
+      {"display": "ffa", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "Foo___a-next-next",
      "data":
      {"/Dependent-Type-Theory/#Foo___a-next-next":
-      {"display": "ffa", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "ffa", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a":
-      {"display": "ffa", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]}},
+      {"display": "ffa", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]}},
      "address": "/Dependent-Type-Theory/"}],
    "Foo.fa":
    [{"id": "Foo___a",
      "data":
      {"/Dependent-Type-Theory/#Foo___a-next-next":
-      {"display": "fa", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "fa", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a-next":
-      {"display": "fa", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "fa", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a":
-      {"display": "fa", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]}},
+      {"display": "fa", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "Foo___a-next-next",
      "data":
      {"/Dependent-Type-Theory/#Foo___a-next-next":
-      {"display": "fa", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "fa", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a-next":
-      {"display": "fa", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "fa", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a":
-      {"display": "fa", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]}},
+      {"display": "fa", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "Foo___a-next",
      "data":
      {"/Dependent-Type-Theory/#Foo___a-next-next":
-      {"display": "fa", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "fa", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a-next":
-      {"display": "fa", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "fa", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a":
-      {"display": "fa", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]}},
+      {"display": "fa", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]}},
      "address": "/Dependent-Type-Theory/"}],
    "Foo.f":
    [{"id": "Foo___a",
      "data":
      {"/Dependent-Type-Theory/#Foo___a-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]}},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "Foo___a-next-next",
      "data":
      {"/Dependent-Type-Theory/#Foo___a-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]}},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "Foo___a-next",
      "data":
      {"/Dependent-Type-Theory/#Foo___a-next-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a-next":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a":
-      {"display": "f", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]}},
+      {"display": "f", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]}},
      "address": "/Dependent-Type-Theory/"}],
    "Foo.bar1":
    [{"id": "Foo",
@@ -7595,50 +7595,50 @@
      {"/Type-Classes/#Foo-next":
       {"display": "a", "context": ["Lean 4 定理证明", "类型类", "管理类型类推断"]},
       "/Dependent-Type-Theory/#Foo___a-next-next":
-      {"display": "a", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "a", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a-next":
-      {"display": "a", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "a", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a":
-      {"display": "a", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]}},
+      {"display": "a", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]}},
      "address": "/Type-Classes/"},
     {"id": "Foo___a",
      "data":
      {"/Type-Classes/#Foo-next":
       {"display": "a", "context": ["Lean 4 定理证明", "类型类", "管理类型类推断"]},
       "/Dependent-Type-Theory/#Foo___a-next-next":
-      {"display": "a", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "a", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a-next":
-      {"display": "a", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "a", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a":
-      {"display": "a", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]}},
+      {"display": "a", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "Foo___a-next-next",
      "data":
      {"/Type-Classes/#Foo-next":
       {"display": "a", "context": ["Lean 4 定理证明", "类型类", "管理类型类推断"]},
       "/Dependent-Type-Theory/#Foo___a-next-next":
-      {"display": "a", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "a", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a-next":
-      {"display": "a", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "a", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a":
-      {"display": "a", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]}},
+      {"display": "a", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "Foo___a-next",
      "data":
      {"/Type-Classes/#Foo-next":
       {"display": "a", "context": ["Lean 4 定理证明", "类型类", "管理类型类推断"]},
       "/Dependent-Type-Theory/#Foo___a-next-next":
-      {"display": "a", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "a", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a-next":
-      {"display": "a", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]},
+      {"display": "a", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]},
       "/Dependent-Type-Theory/#Foo___a":
-      {"display": "a", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]}},
+      {"display": "a", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]}},
      "address": "/Dependent-Type-Theory/"}],
    "Foo.Bar.ffa":
    [{"id": "Foo___a-next",
      "data":
      {"/Dependent-Type-Theory/#Foo___a-next":
-      {"display": "ffa", "context": ["Lean 4 定理证明", "依赖类型论", "命名空间"]}},
+      {"display": "ffa", "context": ["Lean 4 定理证明", "依值类型论", "命名空间"]}},
      "address": "/Dependent-Type-Theory/"}],
    "Foo":
    [{"id": "Foo-next",
@@ -7672,29 +7672,29 @@
    [{"id": "F-next",
      "data":
      {"/Dependent-Type-Theory/#___":
-      {"display": "F", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]},
+      {"display": "F", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]},
       "/Dependent-Type-Theory/#F-next":
-      {"display": "F", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]},
+      {"display": "F", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]},
       "/Dependent-Type-Theory/#F":
-      {"display": "F", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]}},
+      {"display": "F", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "F",
      "data":
      {"/Dependent-Type-Theory/#___":
-      {"display": "F", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]},
+      {"display": "F", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]},
       "/Dependent-Type-Theory/#F-next":
-      {"display": "F", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]},
+      {"display": "F", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]},
       "/Dependent-Type-Theory/#F":
-      {"display": "F", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]}},
+      {"display": "F", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]}},
      "address": "/Dependent-Type-Theory/"},
     {"id": "___",
      "data":
      {"/Dependent-Type-Theory/#___":
-      {"display": "F", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]},
+      {"display": "F", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]},
       "/Dependent-Type-Theory/#F-next":
-      {"display": "F", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]},
+      {"display": "F", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]},
       "/Dependent-Type-Theory/#F":
-      {"display": "F", "context": ["Lean 4 定理证明", "依赖类型论", "作为对象的类型"]}},
+      {"display": "F", "context": ["Lean 4 定理证明", "依值类型论", "作为对象的类型"]}},
      "address": "/Dependent-Type-Theory/"}],
    "Expr.var":
    [{"id": "Expr",

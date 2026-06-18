@@ -1065,7 +1065,7 @@ window.onload = () => {
             <div class="split-toc book">
               <div class="title">
                 <label for="--verso-manual-toc-----bookRoot" class="toggle-split-toc"><input type="checkbox" class="toggle-split-toc" id="--verso-manual-toc-----bookRoot" checked="checked"></label><span class="">Table of Contents</span></div>
-              <table><tr class="numbered"><td class="num">1.</td><td><a href="Introduction/#Intro">引言</a></td></tr><tr class="numbered"><td class="num">2.</td><td><a href="Dependent-Type-Theory/#dependent-type-theory">依赖类型论</a></td></tr><tr class="numbered"><td class="num">3.</td><td><a href="Propositions-and-Proofs/#propositions-and-proofs">命题与证明</a></td></tr><tr class="numbered"><td class="num">4.</td><td><a href="Quantifiers-and-Equality/#quantifiers-and-equality">量词与等式</a></td></tr><tr class="numbered"><td class="num">5.</td><td><a href="Tactics/#tactics">策略</a></td></tr><tr class="current numbered"><td class="num">6.</td><td><a href="Interacting-with-Lean/#interacting-with-lean">与 Lean 交互</a></td></tr><tr class="numbered"><td class="num">7.</td><td><a href="Inductive-Types/#inductive-types">归纳类型</a></td></tr><tr class="numbered"><td class="num">8.</td><td><a href="Induction-and-Recursion/#induction-and-recursion">归纳与递归</a></td></tr><tr class="numbered"><td class="num">9.</td><td><a href="Structures-and-Records/#structures-and-records">结构与记录</a></td></tr><tr class="numbered"><td class="num">10.</td><td><a href="Type-Classes/#type-classes">类型类</a></td></tr><tr class="numbered"><td class="num">11.</td><td><a href="The-Conversion-Tactic-Mode/#conv">转换策略模式</a></td></tr><tr class="numbered"><td class="num">12.</td><td><a href="Axioms-and-Computation/#axioms-and-computation">公理与计算</a></td></tr></table></div>
+              <table><tr class="numbered"><td class="num">1.</td><td><a href="Introduction/#Intro">引言</a></td></tr><tr class="numbered"><td class="num">2.</td><td><a href="Dependent-Type-Theory/#dependent-type-theory">依值类型论</a></td></tr><tr class="numbered"><td class="num">3.</td><td><a href="Propositions-and-Proofs/#propositions-and-proofs">命题与证明</a></td></tr><tr class="numbered"><td class="num">4.</td><td><a href="Quantifiers-and-Equality/#quantifiers-and-equality">量词与等式</a></td></tr><tr class="numbered"><td class="num">5.</td><td><a href="Tactics/#tactics">策略</a></td></tr><tr class="current numbered"><td class="num">6.</td><td><a href="Interacting-with-Lean/#interacting-with-lean">与 Lean 交互</a></td></tr><tr class="numbered"><td class="num">7.</td><td><a href="Inductive-Types/#inductive-types">归纳类型</a></td></tr><tr class="numbered"><td class="num">8.</td><td><a href="Induction-and-Recursion/#induction-and-recursion">归纳与递归</a></td></tr><tr class="numbered"><td class="num">9.</td><td><a href="Structures-and-Records/#structures-and-records">结构与记录</a></td></tr><tr class="numbered"><td class="num">10.</td><td><a href="Type-Classes/#type-classes">类型类</a></td></tr><tr class="numbered"><td class="num">11.</td><td><a href="The-Conversion-Tactic-Mode/#conv">转换策略模式</a></td></tr><tr class="numbered"><td class="num">12.</td><td><a href="Axioms-and-Computation/#axioms-and-computation">公理与计算</a></td></tr></table></div>
             <div class="split-toc">
               <div class="title">
                 <label for="--verso-manual-toc-interacting-with-lean" class="toggle-split-toc"><input type="checkbox" class="toggle-split-toc" id="--verso-manual-toc-interacting-with-lean" checked="checked"></label><span class="number">6.</span> <span class="current"><a href="Interacting-with-Lean/#interacting-with-lean">与 Lean 交互</a></span></div>
@@ -1089,7 +1089,7 @@ window.onload = () => {
             <h1>
               6. 与 Lean 交互<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=interacting-with-lean" title="Permalink">🔗</a></span></h1>
             <p>
-              你现在已经熟悉了依赖类型论的基础：它既是一种定义数学对象的语言，
+              你现在已经熟悉了依值类型论的基础：它既是一种定义数学对象的语言，
 也是一种构造证明的语言。你目前还缺少的一点，是一种定义新数据类型
 的机制。我们将在下一章填补这一空白，届时将引入<strong>归纳数据类型</strong>这一概念。
 不过在此之前，本章先暂时离开类型论的机制性内容，转而探讨一些与 Lean
@@ -1614,7 +1614,7 @@ addToggleButtonToElement("--verso-unique-1781");</script>
                 6.7. 记法<span class="permalink-widget inline"><a href="find/?domain=Verso.Genre.Manual.section&amp;name=notation" title="Permalink">🔗</a></span></h2>
               <p>
                 Lean 中的标识符可以包含任意字母数字字符，也包括希腊字母（除了
-∀、Σ 和 λ，它们如我们所见，在依赖类型论中具有特殊含义）。
+∀、Σ 和 λ，它们如我们所见，在依值类型论中具有特殊含义）。
 标识符还可以包含下标；输入方法是先键入 <code class="unicode-abbrev">\_</code>，再输入所需的下标字符。</p>
               <p>
                 Lean 的解析器是可扩展的，也就是说，我们可以定义新的记法。</p>
